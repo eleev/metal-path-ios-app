@@ -79,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A92D6701203C390700F02EBB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A9357C61203C2F5E000EB659 /* Main.storyboard */,
+				A9357C66203C2F5E000EB659 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A9357C4C203C2F5D000EB659 = {
 			isa = PBXGroup;
 			children = (
@@ -102,15 +111,14 @@
 		A9357C57203C2F5E000EB659 /* metal-path-ios-app */ = {
 			isa = PBXGroup;
 			children = (
-				A9357C58203C2F5E000EB659 /* AppDelegate.swift */,
+				A92D6701203C390700F02EBB /* View */,
 				A9357C5A203C2F5E000EB659 /* ShaderTypes.h */,
+				A9357C5F203C2F5E000EB659 /* Shaders.metal */,
 				A9357C5B203C2F5E000EB659 /* Renderer.swift */,
 				A9357C5D203C2F5E000EB659 /* GameViewController.swift */,
-				A9357C5F203C2F5E000EB659 /* Shaders.metal */,
-				A9357C61203C2F5E000EB659 /* Main.storyboard */,
 				A9357C64203C2F5E000EB659 /* Assets.xcassets */,
-				A9357C66203C2F5E000EB659 /* LaunchScreen.storyboard */,
 				A9357C69203C2F5E000EB659 /* Info.plist */,
+				A9357C58203C2F5E000EB659 /* AppDelegate.swift */,
 			);
 			path = "metal-path-ios-app";
 			sourceTree = "<group>";
