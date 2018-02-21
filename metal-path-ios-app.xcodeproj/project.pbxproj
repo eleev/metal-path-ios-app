@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		A9357C59203C2F5E000EB659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9357C58203C2F5E000EB659 /* AppDelegate.swift */; };
 		A9357C5C203C2F5E000EB659 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9357C5B203C2F5E000EB659 /* Renderer.swift */; };
-		A9357C5E203C2F5E000EB659 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9357C5D203C2F5E000EB659 /* GameViewController.swift */; };
+		A9357C5E203C2F5E000EB659 /* TexturedRotatingCubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9357C5D203C2F5E000EB659 /* TexturedRotatingCubeViewController.swift */; };
 		A9357C60203C2F5E000EB659 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = A9357C5F203C2F5E000EB659 /* Shaders.metal */; };
 		A9357C63203C2F5E000EB659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9357C61203C2F5E000EB659 /* Main.storyboard */; };
-		A9357C65203C2F5E000EB659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9357C64203C2F5E000EB659 /* Assets.xcassets */; };
+		A9357C65203C2F5E000EB659 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9357C64203C2F5E000EB659 /* Icons.xcassets */; };
 		A9357C68203C2F5E000EB659 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9357C66203C2F5E000EB659 /* LaunchScreen.storyboard */; };
 		A9357C73203C2F5E000EB659 /* metal_path_ios_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9357C72203C2F5E000EB659 /* metal_path_ios_appTests.swift */; };
 		A9357C7E203C2F5E000EB659 /* metal_path_ios_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9357C7D203C2F5E000EB659 /* metal_path_ios_appUITests.swift */; };
+		A9448CD4203D9CE000DEB924 /* ScenesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9448CD3203D9CE000DEB924 /* ScenesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +41,10 @@
 		A9357C58203C2F5E000EB659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9357C5A203C2F5E000EB659 /* ShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
 		A9357C5B203C2F5E000EB659 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
-		A9357C5D203C2F5E000EB659 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		A9357C5D203C2F5E000EB659 /* TexturedRotatingCubeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TexturedRotatingCubeViewController.swift; sourceTree = "<group>"; };
 		A9357C5F203C2F5E000EB659 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		A9357C62203C2F5E000EB659 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A9357C64203C2F5E000EB659 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A9357C64203C2F5E000EB659 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		A9357C67203C2F5E000EB659 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9357C69203C2F5E000EB659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9357C6E203C2F5E000EB659 /* metal-path-ios-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "metal-path-ios-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +53,7 @@
 		A9357C79203C2F5E000EB659 /* metal-path-ios-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "metal-path-ios-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9357C7D203C2F5E000EB659 /* metal_path_ios_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = metal_path_ios_appUITests.swift; sourceTree = "<group>"; };
 		A9357C7F203C2F5E000EB659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9448CD3203D9CE000DEB924 /* ScenesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,14 +113,14 @@
 		A9357C57203C2F5E000EB659 /* metal-path-ios-app */ = {
 			isa = PBXGroup;
 			children = (
-				A92D6701203C390700F02EBB /* View */,
+				A9357C69203C2F5E000EB659 /* Info.plist */,
 				A9357C5A203C2F5E000EB659 /* ShaderTypes.h */,
 				A9357C5F203C2F5E000EB659 /* Shaders.metal */,
-				A9357C5B203C2F5E000EB659 /* Renderer.swift */,
-				A9357C5D203C2F5E000EB659 /* GameViewController.swift */,
-				A9357C64203C2F5E000EB659 /* Assets.xcassets */,
-				A9357C69203C2F5E000EB659 /* Info.plist */,
-				A9357C58203C2F5E000EB659 /* AppDelegate.swift */,
+				A9448CD8203DCB8000DEB924 /* Model */,
+				A92D6701203C390700F02EBB /* View */,
+				A9448CCF203D9C1700DEB924 /* View Controllers */,
+				A9448CD6203DCB1800DEB924 /* Assets */,
+				A9448CD7203DCB4E00DEB924 /* System */,
 			);
 			path = "metal-path-ios-app";
 			sourceTree = "<group>";
@@ -139,6 +141,63 @@
 				A9357C7F203C2F5E000EB659 /* Info.plist */,
 			);
 			path = "metal-path-ios-appUITests";
+			sourceTree = "<group>";
+		};
+		A9448CCF203D9C1700DEB924 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A9448CD0203D9C9900DEB924 /* Scenes */,
+				A9448CD5203DCAF300DEB924 /* Intermediate - Textured Rotating Cube */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A9448CD0203D9C9900DEB924 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A9448CD3203D9CE000DEB924 /* ScenesTableViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A9448CD5203DCAF300DEB924 /* Intermediate - Textured Rotating Cube */ = {
+			isa = PBXGroup;
+			children = (
+				A9357C5D203C2F5E000EB659 /* TexturedRotatingCubeViewController.swift */,
+			);
+			path = "Intermediate - Textured Rotating Cube";
+			sourceTree = "<group>";
+		};
+		A9448CD6203DCB1800DEB924 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A9357C64203C2F5E000EB659 /* Icons.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		A9448CD7203DCB4E00DEB924 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				A9357C58203C2F5E000EB659 /* AppDelegate.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		A9448CD8203DCB8000DEB924 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A9448CD9203DCB8700DEB924 /* Renderer */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A9448CD9203DCB8700DEB924 /* Renderer */ = {
+			isa = PBXGroup;
+			children = (
+				A9357C5B203C2F5E000EB659 /* Renderer.swift */,
+			);
+			path = Renderer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,7 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9357C68203C2F5E000EB659 /* LaunchScreen.storyboard in Resources */,
-				A9357C65203C2F5E000EB659 /* Assets.xcassets in Resources */,
+				A9357C65203C2F5E000EB659 /* Icons.xcassets in Resources */,
 				A9357C63203C2F5E000EB659 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,8 +335,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9357C60203C2F5E000EB659 /* Shaders.metal in Sources */,
+				A9448CD4203D9CE000DEB924 /* ScenesTableViewController.swift in Sources */,
 				A9357C5C203C2F5E000EB659 /* Renderer.swift in Sources */,
-				A9357C5E203C2F5E000EB659 /* GameViewController.swift in Sources */,
+				A9357C5E203C2F5E000EB659 /* TexturedRotatingCubeViewController.swift in Sources */,
 				A9357C59203C2F5E000EB659 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
