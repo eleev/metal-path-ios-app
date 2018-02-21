@@ -10,10 +10,26 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Render Pass Descriptor-->
+        <scene sceneID="LWI-q8-V6L">
+            <objects>
+                <viewController id="i7N-KT-YON" customClass="RenderPassDescriptorViewController" customModule="metal_path_ios_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SL8-hj-X7A" customClass="MTKView">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="SAa-tY-nQN"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Render Pass Descriptor" id="nE3-uo-jZG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bSj-rQ-Moa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1296" y="-411"/>
+        </scene>
         <!--Textured, Rotating Cube-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="metal_path_ios_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="TexturedRotatingCubeViewController" customModule="metal_path_ios_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3se-qz-xqx" customClass="MTKView">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,7 +45,7 @@
         <!--Metal Sandbox-->
         <scene sceneID="Fih-TB-RGZ">
             <objects>
-                <tableViewController id="sqO-7I-3rE" sceneMemberID="viewController">
+                <tableViewController id="sqO-7I-3rE" customClass="ScenesTableViewController" customModule="metal_path_ios_app" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oJd-08-EqC">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,6 +81,9 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="i7N-KT-YON" kind="show" id="YW3-PZ-ane"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
