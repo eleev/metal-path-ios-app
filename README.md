@@ -1,7 +1,7 @@
 # metal-path-ios-app
 
 <p align="center">
-<img src="documentation-assets/metal2-logo.png" alt="Drawing" style="width: 250px;"/>
+<img src="documentation-assets/metal2-logo.png" alt="Drawing" style="width: 200px;"/>
 </p>
 
 iOS application sandbox that holds various Metal API related scenes, from very fundamental to advanced developments 🤖. The motivation behind the project is the following :
