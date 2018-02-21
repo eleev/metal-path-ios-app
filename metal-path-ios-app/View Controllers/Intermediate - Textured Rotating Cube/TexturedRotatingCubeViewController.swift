@@ -9,12 +9,15 @@
 import UIKit
 import MetalKit
 
-// Our iOS specific view controller
-class GameViewController: UIViewController {
+class TexturedRotatingCubeViewController: UIViewController {
 
+    // MARK: - Properties
+    
     var renderer: Renderer!
     var mtkView: MTKView!
 
+    // MARK: - Lirecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,4 +46,5 @@ class GameViewController: UIViewController {
 
         mtkView.delegate = renderer
     }
+    
 }
