@@ -17,6 +17,7 @@
 		A9357C73203C2F5E000EB659 /* metal_path_ios_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9357C72203C2F5E000EB659 /* metal_path_ios_appTests.swift */; };
 		A9357C7E203C2F5E000EB659 /* metal_path_ios_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9357C7D203C2F5E000EB659 /* metal_path_ios_appUITests.swift */; };
 		A9448CD4203D9CE000DEB924 /* ScenesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9448CD3203D9CE000DEB924 /* ScenesTableViewController.swift */; };
+		A9448CDE203DCC7900DEB924 /* RenderPassDescriptorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9448CDD203DCC7900DEB924 /* RenderPassDescriptorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		A9357C7D203C2F5E000EB659 /* metal_path_ios_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = metal_path_ios_appUITests.swift; sourceTree = "<group>"; };
 		A9357C7F203C2F5E000EB659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9448CD3203D9CE000DEB924 /* ScenesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenesTableViewController.swift; sourceTree = "<group>"; };
+		A9448CDD203DCC7900DEB924 /* RenderPassDescriptorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderPassDescriptorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,26 +148,27 @@
 		A9448CCF203D9C1700DEB924 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A9448CD0203D9C9900DEB924 /* Scenes */,
-				A9448CD5203DCAF300DEB924 /* Intermediate - Textured Rotating Cube */,
+				A9448CD0203D9C9900DEB924 /* Scene List */,
+				A9448CDA203DCC2400DEB924 /* Foundamental Scenes */,
+				A9448CDB203DCC3300DEB924 /* Intermediate Scenes */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
-		A9448CD0203D9C9900DEB924 /* Scenes */ = {
+		A9448CD0203D9C9900DEB924 /* Scene List */ = {
 			isa = PBXGroup;
 			children = (
 				A9448CD3203D9CE000DEB924 /* ScenesTableViewController.swift */,
 			);
-			path = Scenes;
+			path = "Scene List";
 			sourceTree = "<group>";
 		};
-		A9448CD5203DCAF300DEB924 /* Intermediate - Textured Rotating Cube */ = {
+		A9448CD5203DCAF300DEB924 /* Textured Rotating Cube */ = {
 			isa = PBXGroup;
 			children = (
 				A9357C5D203C2F5E000EB659 /* TexturedRotatingCubeViewController.swift */,
 			);
-			path = "Intermediate - Textured Rotating Cube";
+			path = "Textured Rotating Cube";
 			sourceTree = "<group>";
 		};
 		A9448CD6203DCB1800DEB924 /* Assets */ = {
@@ -198,6 +201,30 @@
 				A9357C5B203C2F5E000EB659 /* Renderer.swift */,
 			);
 			path = Renderer;
+			sourceTree = "<group>";
+		};
+		A9448CDA203DCC2400DEB924 /* Foundamental Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A9448CDC203DCC5200DEB924 /* Render Pass Descriptor */,
+			);
+			path = "Foundamental Scenes";
+			sourceTree = "<group>";
+		};
+		A9448CDB203DCC3300DEB924 /* Intermediate Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A9448CD5203DCAF300DEB924 /* Textured Rotating Cube */,
+			);
+			path = "Intermediate Scenes";
+			sourceTree = "<group>";
+		};
+		A9448CDC203DCC5200DEB924 /* Render Pass Descriptor */ = {
+			isa = PBXGroup;
+			children = (
+				A9448CDD203DCC7900DEB924 /* RenderPassDescriptorViewController.swift */,
+			);
+			path = "Render Pass Descriptor";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,6 +363,7 @@
 			files = (
 				A9357C60203C2F5E000EB659 /* Shaders.metal in Sources */,
 				A9448CD4203D9CE000DEB924 /* ScenesTableViewController.swift in Sources */,
+				A9448CDE203DCC7900DEB924 /* RenderPassDescriptorViewController.swift in Sources */,
 				A9357C5C203C2F5E000EB659 /* Renderer.swift in Sources */,
 				A9357C5E203C2F5E000EB659 /* TexturedRotatingCubeViewController.swift in Sources */,
 				A9357C59203C2F5E000EB659 /* AppDelegate.swift in Sources */,
