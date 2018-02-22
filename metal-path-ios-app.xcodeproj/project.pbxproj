@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A92D690F203EFED0002AFB7A /* iRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D690E203EFED0002AFB7A /* iRender.swift */; };
+		A92D6911203F43FD002AFB7A /* RenderErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D6910203F43FD002AFB7A /* RenderErrorType.swift */; };
 		A9357C59203C2F5E000EB659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9357C58203C2F5E000EB659 /* AppDelegate.swift */; };
 		A9357C5C203C2F5E000EB659 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9357C5B203C2F5E000EB659 /* Renderer.swift */; };
 		A9357C5E203C2F5E000EB659 /* TexturedRotatingCubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9357C5D203C2F5E000EB659 /* TexturedRotatingCubeViewController.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		A92D690E203EFED0002AFB7A /* iRender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRender.swift; sourceTree = "<group>"; };
+		A92D6910203F43FD002AFB7A /* RenderErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderErrorType.swift; sourceTree = "<group>"; };
 		A9357C55203C2F5E000EB659 /* metal-path-ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "metal-path-ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9357C58203C2F5E000EB659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9357C5A203C2F5E000EB659 /* ShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			children = (
 				A9357C5B203C2F5E000EB659 /* Renderer.swift */,
 				A92D690E203EFED0002AFB7A /* iRender.swift */,
+				A92D6910203F43FD002AFB7A /* RenderErrorType.swift */,
 			);
 			path = Renderer;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				A9448CD4203D9CE000DEB924 /* ScenesTableViewController.swift in Sources */,
 				A9448CDE203DCC7900DEB924 /* RenderPassDescriptorViewController.swift in Sources */,
 				A9357C5C203C2F5E000EB659 /* Renderer.swift in Sources */,
+				A92D6911203F43FD002AFB7A /* RenderErrorType.swift in Sources */,
 				A9357C5E203C2F5E000EB659 /* TexturedRotatingCubeViewController.swift in Sources */,
 				A9357C59203C2F5E000EB659 /* AppDelegate.swift in Sources */,
 				A92D690F203EFED0002AFB7A /* iRender.swift in Sources */,

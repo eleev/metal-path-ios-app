@@ -10,10 +10,6 @@ import Foundation
 import Metal
 import MetalKit
 
-enum iRenderError: String, Error {
-    case missingDrawable = "Rendering drawable was not specified"
-}
-
 class iRender: MTKView {
     
     // MARK: - Properties
