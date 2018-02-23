@@ -21,7 +21,7 @@
 		A9448CD4203D9CE000DEB924 /* ScenesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9448CD3203D9CE000DEB924 /* ScenesTableViewController.swift */; };
 		A9448CDE203DCC7900DEB924 /* RenderPassDescriptorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9448CDD203DCC7900DEB924 /* RenderPassDescriptorViewController.swift */; };
 		A9E1D50E204061E300CBD08F /* TriangleMesh2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1D50D204061E300CBD08F /* TriangleMesh2D.swift */; };
-		A9E1D5102040631A00CBD08F /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1D50F2040631A00CBD08F /* Mesh.swift */; };
+		A9E1D5102040631A00CBD08F /* MeshProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1D50F2040631A00CBD08F /* MeshProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +63,7 @@
 		A9448CD3203D9CE000DEB924 /* ScenesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenesTableViewController.swift; sourceTree = "<group>"; };
 		A9448CDD203DCC7900DEB924 /* RenderPassDescriptorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderPassDescriptorViewController.swift; sourceTree = "<group>"; };
 		A9E1D50D204061E300CBD08F /* TriangleMesh2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleMesh2D.swift; sourceTree = "<group>"; };
-		A9E1D50F2040631A00CBD08F /* Mesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mesh.swift; sourceTree = "<group>"; };
+		A9E1D50F2040631A00CBD08F /* MeshProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,7 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				A9E1D50D204061E300CBD08F /* TriangleMesh2D.swift */,
-				A9E1D50F2040631A00CBD08F /* Mesh.swift */,
+				A9E1D50F2040631A00CBD08F /* MeshProtocol.swift */,
 			);
 			path = Mesh;
 			sourceTree = "<group>";
@@ -393,7 +393,7 @@
 				A9448CD4203D9CE000DEB924 /* ScenesTableViewController.swift in Sources */,
 				A9448CDE203DCC7900DEB924 /* RenderPassDescriptorViewController.swift in Sources */,
 				A9357C5C203C2F5E000EB659 /* Renderer.swift in Sources */,
-				A9E1D5102040631A00CBD08F /* Mesh.swift in Sources */,
+				A9E1D5102040631A00CBD08F /* MeshProtocol.swift in Sources */,
 				A92D6911203F43FD002AFB7A /* RenderErrorType.swift in Sources */,
 				A9357C5E203C2F5E000EB659 /* TexturedRotatingCubeViewController.swift in Sources */,
 				A9E1D50E204061E300CBD08F /* TriangleMesh2D.swift in Sources */,

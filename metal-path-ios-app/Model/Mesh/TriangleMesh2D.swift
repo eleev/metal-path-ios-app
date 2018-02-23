@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Metal
 
-struct TriangleMesh2D: Mesh {
+struct TriangleMesh2D: MeshProtocol {
 
     // MARK: - Properties
     
