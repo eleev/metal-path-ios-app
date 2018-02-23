@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A92D690F203EFED0002AFB7A /* iRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D690E203EFED0002AFB7A /* iRender.swift */; };
+		A92D690F203EFED0002AFB7A /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D690E203EFED0002AFB7A /* MetalView.swift */; };
 		A92D6911203F43FD002AFB7A /* RenderErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D6910203F43FD002AFB7A /* RenderErrorType.swift */; };
 		A9357C59203C2F5E000EB659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9357C58203C2F5E000EB659 /* AppDelegate.swift */; };
 		A9357C5C203C2F5E000EB659 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9357C5B203C2F5E000EB659 /* Renderer.swift */; };
@@ -20,6 +20,8 @@
 		A9357C7E203C2F5E000EB659 /* metal_path_ios_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9357C7D203C2F5E000EB659 /* metal_path_ios_appUITests.swift */; };
 		A9448CD4203D9CE000DEB924 /* ScenesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9448CD3203D9CE000DEB924 /* ScenesTableViewController.swift */; };
 		A9448CDE203DCC7900DEB924 /* RenderPassDescriptorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9448CDD203DCC7900DEB924 /* RenderPassDescriptorViewController.swift */; };
+		A9E1D50E204061E300CBD08F /* TriangleMesh2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1D50D204061E300CBD08F /* TriangleMesh2D.swift */; };
+		A9E1D5102040631A00CBD08F /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1D50F2040631A00CBD08F /* Mesh.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A92D690E203EFED0002AFB7A /* iRender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRender.swift; sourceTree = "<group>"; };
+		A92D690E203EFED0002AFB7A /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
 		A92D6910203F43FD002AFB7A /* RenderErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderErrorType.swift; sourceTree = "<group>"; };
 		A9357C55203C2F5E000EB659 /* metal-path-ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "metal-path-ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9357C58203C2F5E000EB659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,8 @@
 		A9357C7F203C2F5E000EB659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9448CD3203D9CE000DEB924 /* ScenesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenesTableViewController.swift; sourceTree = "<group>"; };
 		A9448CDD203DCC7900DEB924 /* RenderPassDescriptorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderPassDescriptorViewController.swift; sourceTree = "<group>"; };
+		A9E1D50D204061E300CBD08F /* TriangleMesh2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleMesh2D.swift; sourceTree = "<group>"; };
+		A9E1D50F2040631A00CBD08F /* Mesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mesh.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +198,8 @@
 		A9448CD8203DCB8000DEB924 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A9E1D50C204061CF00CBD08F /* Mesh */,
+				A9E1D50B2040609F00CBD08F /* Metal View */,
 				A9448CD9203DCB8700DEB924 /* Renderer */,
 			);
 			path = Model;
@@ -203,8 +209,6 @@
 			isa = PBXGroup;
 			children = (
 				A9357C5B203C2F5E000EB659 /* Renderer.swift */,
-				A92D690E203EFED0002AFB7A /* iRender.swift */,
-				A92D6910203F43FD002AFB7A /* RenderErrorType.swift */,
 			);
 			path = Renderer;
 			sourceTree = "<group>";
@@ -231,6 +235,24 @@
 				A9448CDD203DCC7900DEB924 /* RenderPassDescriptorViewController.swift */,
 			);
 			path = "Render Pass Descriptor";
+			sourceTree = "<group>";
+		};
+		A9E1D50B2040609F00CBD08F /* Metal View */ = {
+			isa = PBXGroup;
+			children = (
+				A92D690E203EFED0002AFB7A /* MetalView.swift */,
+				A92D6910203F43FD002AFB7A /* RenderErrorType.swift */,
+			);
+			path = "Metal View";
+			sourceTree = "<group>";
+		};
+		A9E1D50C204061CF00CBD08F /* Mesh */ = {
+			isa = PBXGroup;
+			children = (
+				A9E1D50D204061E300CBD08F /* TriangleMesh2D.swift */,
+				A9E1D50F2040631A00CBD08F /* Mesh.swift */,
+			);
+			path = Mesh;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,10 +393,12 @@
 				A9448CD4203D9CE000DEB924 /* ScenesTableViewController.swift in Sources */,
 				A9448CDE203DCC7900DEB924 /* RenderPassDescriptorViewController.swift in Sources */,
 				A9357C5C203C2F5E000EB659 /* Renderer.swift in Sources */,
+				A9E1D5102040631A00CBD08F /* Mesh.swift in Sources */,
 				A92D6911203F43FD002AFB7A /* RenderErrorType.swift in Sources */,
 				A9357C5E203C2F5E000EB659 /* TexturedRotatingCubeViewController.swift in Sources */,
+				A9E1D50E204061E300CBD08F /* TriangleMesh2D.swift in Sources */,
 				A9357C59203C2F5E000EB659 /* AppDelegate.swift in Sources */,
-				A92D690F203EFED0002AFB7A /* iRender.swift in Sources */,
+				A92D690F203EFED0002AFB7A /* MetalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,10 @@ import Foundation
 /// Error type that specifically describes error cases that may occur while using custom renderer
 /// Cases:
 /// - missingDrawable
+/// - missingDevice
+/// - missingCommandQueue
 enum iRenderError: String, Error {
     case missingDrawable = "Rendering drawable was not specified"
+    case missingDevice = "Target device is nil or has not been specified"
+    case missingComandQueue = "Could not construct Command Queue"
 }
