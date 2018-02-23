@@ -10,7 +10,8 @@ import Foundation
 import Metal
 import MetalKit
 
-class iRender: MTKView {
+/// Custon derivative from the MTKView that adds suport for custom renderer and is responsible for shader compilation, attachment, buffers and encoders
+class MetalView: MTKView {
     
     // MARK: - Properties
     
@@ -18,11 +19,11 @@ class iRender: MTKView {
     
     override init(frame frameRect: CGRect, device: MTLDevice?) {
         super.init(frame: frameRect, device: device)
-        
+        self.device = device
     }
     
     required init(coder: NSCoder) {
-        fatalError(#function + " required initilzied has not been implemented")
+        fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - Public Methods
@@ -39,10 +40,10 @@ class iRender: MTKView {
     
     // MARK: - Private Methods
     
+    /// This function is called every frame by the overriden draw(:CGRect) function. The main responsibility is to provide means that clear screen, specify render pass descriptors (RPDs), textures, buffers and everything related to graphics rendering
+    ///
+    /// - Throws: may throw missing attachments, such as missing drawable target for instance
     private func render() throws {
-        
-        let device = MTLCreateSystemDefaultDevice()
-        self.device = device
         
         let rpd = MTLRenderPassDescriptor()
         let bleenColor = MTLClearColorMake(0, 0.5, 0.5, 1.0)
