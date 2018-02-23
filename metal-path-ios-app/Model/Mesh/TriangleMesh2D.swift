@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import Metal
 
+/// Specifies data for triangle 2D and conformance to MeshProtocol 
 struct TriangleMesh2D: MeshProtocol {
 
     // MARK: - Properties
