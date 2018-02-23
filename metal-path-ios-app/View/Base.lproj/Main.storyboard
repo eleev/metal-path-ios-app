@@ -14,7 +14,7 @@
         <scene sceneID="LWI-q8-V6L">
             <objects>
                 <viewController id="i7N-KT-YON" customClass="RenderPassDescriptorViewController" customModule="metal_path_ios_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="SL8-hj-X7A" customClass="MTKView">
+                    <view key="view" contentMode="scaleToFill" id="SL8-hj-X7A">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -45,7 +45,7 @@
         <!--Metal Sandbox-->
         <scene sceneID="Fih-TB-RGZ">
             <objects>
-                <tableViewController id="sqO-7I-3rE" customClass="ScenesTableViewController" customModule="metal_path_ios_app" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="sqO-7I-3rE" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oJd-08-EqC">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
