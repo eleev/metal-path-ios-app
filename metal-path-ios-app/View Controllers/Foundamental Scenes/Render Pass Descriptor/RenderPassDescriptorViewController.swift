@@ -7,13 +7,25 @@
 //
 
 import UIKit
+import MetalKit
 
 class RenderPassDescriptorViewController: UIViewController {
 
+    var renderer: MetalView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        guard let defaultDevice = MTLCreateSystemDefaultDevice() else {
+            debugPrint(#function + " Metal API is not supported")
+            return
+        }
+
+        renderer = MetalView(frame: view.frame, device: defaultDevice)
+        view = renderer
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +33,6 @@ class RenderPassDescriptorViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
