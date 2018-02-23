@@ -157,7 +157,7 @@ class Renderer: NSObject, MTKViewDelegate {
                                      geometryType: MDLGeometryType.triangles,
                                      inwardNormals:false,
                                      allocator: metalAllocator)
-        
+
         let mdlVertexDescriptor = MTKModelIOVertexDescriptorFromMetal(mtlVertexDescriptor)
         
         guard let attributes = mdlVertexDescriptor.attributes as? [MDLVertexAttribute] else {
