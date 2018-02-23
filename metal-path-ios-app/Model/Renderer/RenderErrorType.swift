@@ -8,6 +8,9 @@
 
 import Foundation
 
+/// Error type that specifically describes error cases that may occur while using custom renderer
+/// Cases:
+/// - missingDrawable
 enum iRenderError: String, Error {
     case missingDrawable = "Rendering drawable was not specified"
 }
