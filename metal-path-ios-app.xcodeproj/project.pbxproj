@@ -249,8 +249,8 @@
 		A9E1D50C204061CF00CBD08F /* Mesh */ = {
 			isa = PBXGroup;
 			children = (
-				A9E1D50D204061E300CBD08F /* TriangleMesh2D.swift */,
 				A9E1D50F2040631A00CBD08F /* MeshProtocol.swift */,
+				A9E1D50D204061E300CBD08F /* TriangleMesh2D.swift */,
 			);
 			path = Mesh;
 			sourceTree = "<group>";

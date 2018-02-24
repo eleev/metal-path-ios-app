@@ -59,7 +59,7 @@ class MetalView: MTKView {
         // Make sure that current drawable exsists
         guard let drawable = currentDrawable else {
             debugPrint(#function + " drawable was not specified - the renderer will not be able to commit encodding command buffer and command encoder")
-            throw iRenderError.missingDrawable
+            throw RenderErrorType.missingDrawable
         }
         
         // Finish encoding and comming changes
@@ -81,18 +81,18 @@ class MetalView: MTKView {
         // Make sure that library can be obtaned
         guard let lib = device?.makeDefaultLibrary() else {
             debugPrint(#function + " could not make default library object, the method will be thrown")
-            throw iRenderError.couldNotCreateLibrary
+            throw RenderErrorType.couldNotCreateLibrary
         }
         // Create vertex shader function
         guard let vertexFunction = lib.makeFunction(name: vertexShaderName) else {
             debugPrint(#function + " could not create vertex function")
-            throw iRenderError.couldNotMakeShaderFunction
+            throw RenderErrorType.couldNotMakeShaderFunction
         }
         
         // Create fragment shader function
         guard let fragmentFunction = lib.makeFunction(name: fragmentShaderName) else {
             debugPrint(#function + " could not create fragment function")
-            throw iRenderError.couldNotMakeShaderFunction
+            throw RenderErrorType.couldNotMakeShaderFunction
         }
         
         return (vertexFunction: vertexFunction, fragmentFunction: fragmentFunction)

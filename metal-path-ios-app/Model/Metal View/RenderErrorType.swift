@@ -13,8 +13,13 @@ import Foundation
 /// - missingDrawable
 /// - missingDevice
 /// - missingCommandQueue
-enum iRenderError: String, Error {
+/// - couldNotCreateLibrary
+/// - couldNotMakeShaderFunction
+enum RenderErrorType: String, Error {
     case missingDrawable = "Rendering drawable was not specified"
     case missingDevice = "Target device is nil or has not been specified"
     case missingComandQueue = "Could not construct Command Queue"
+    case couldNotCreateLibrary = "Could not construct Rebderer Library"
+    case couldNotMakeShaderFunction = "Shader function could not be made"
 }
+
