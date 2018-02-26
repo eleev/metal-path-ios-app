@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A92D690F203EFED0002AFB7A /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D690E203EFED0002AFB7A /* MetalView.swift */; };
 		A92D6911203F43FD002AFB7A /* RenderErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D6910203F43FD002AFB7A /* RenderErrorType.swift */; };
+		A931F06620440E3B009FA7A6 /* PassThrough.metal in Sources */ = {isa = PBXBuildFile; fileRef = A931F06520440E3B009FA7A6 /* PassThrough.metal */; };
 		A9357C59203C2F5E000EB659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9357C58203C2F5E000EB659 /* AppDelegate.swift */; };
 		A9357C5C203C2F5E000EB659 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9357C5B203C2F5E000EB659 /* Renderer.swift */; };
 		A9357C5E203C2F5E000EB659 /* TexturedRotatingCubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9357C5D203C2F5E000EB659 /* TexturedRotatingCubeViewController.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		A92D690E203EFED0002AFB7A /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
 		A92D6910203F43FD002AFB7A /* RenderErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderErrorType.swift; sourceTree = "<group>"; };
+		A931F06520440E3B009FA7A6 /* PassThrough.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = PassThrough.metal; sourceTree = "<group>"; };
 		A9357C55203C2F5E000EB659 /* metal-path-ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "metal-path-ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9357C58203C2F5E000EB659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9357C5A203C2F5E000EB659 /* ShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
@@ -100,6 +102,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		A931F06320440DFF009FA7A6 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				A931F06420440E08009FA7A6 /* Pass-Through */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		A931F06420440E08009FA7A6 /* Pass-Through */ = {
+			isa = PBXGroup;
+			children = (
+				A931F06520440E3B009FA7A6 /* PassThrough.metal */,
+			);
+			path = "Pass-Through";
+			sourceTree = "<group>";
+		};
 		A9357C4C203C2F5D000EB659 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +144,7 @@
 				A9357C69203C2F5E000EB659 /* Info.plist */,
 				A9357C5A203C2F5E000EB659 /* ShaderTypes.h */,
 				A9357C5F203C2F5E000EB659 /* Shaders.metal */,
+				A931F06320440DFF009FA7A6 /* Shaders */,
 				A9448CD8203DCB8000DEB924 /* Model */,
 				A92D6701203C390700F02EBB /* View */,
 				A9448CCF203D9C1700DEB924 /* View Controllers */,
@@ -395,6 +414,7 @@
 				A9357C5C203C2F5E000EB659 /* Renderer.swift in Sources */,
 				A9E1D5102040631A00CBD08F /* MeshProtocol.swift in Sources */,
 				A92D6911203F43FD002AFB7A /* RenderErrorType.swift in Sources */,
+				A931F06620440E3B009FA7A6 /* PassThrough.metal in Sources */,
 				A9357C5E203C2F5E000EB659 /* TexturedRotatingCubeViewController.swift in Sources */,
 				A9E1D50E204061E300CBD08F /* TriangleMesh2D.swift in Sources */,
 				A9357C59203C2F5E000EB659 /* AppDelegate.swift in Sources */,
