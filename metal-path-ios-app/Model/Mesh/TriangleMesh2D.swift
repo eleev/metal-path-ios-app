@@ -19,17 +19,15 @@ struct TriangleMesh2D: MeshProtocol {
     ///             Top Center
     ///     ------------------------
     /// Bottom Left ---------- Botton Right
-    /// W component makes the used coordinates homogeneous
-    var vertexData: [Float] = [
-        -1.0, -1.0, 0.0, 1.0, // Bottom Left
-         1.0, -1.0, 0.0, 1.0, // Bottom Right
-         0.0,  1.0, 0.0, 1.0  // Top Center
+    var vertexData: [Vertex] = [
+        Vertex(position: [-1.0, -1.0, 0.0, 1.0], color: [1, 0, 0, 1]),
+        Vertex(position: [ 1.0, -1.0, 0.0, 1.0], color: [0, 1, 0, 1]),
+        Vertex(position: [ 0.0,  1.0, 0.0, 1.0], color: [0, 0, 1, 1])
     ]
     
     /// Computes the size of the vertex array by the following scehem:
-    /// 12 floats (3 vertices, each containing 4 float components) = float.size * number of vertex array components
     var dataSize: Int {
-        return vertexData.count * MemoryLayout<Float>.size
+        return vertexData.count * MemoryLayout<Vertex>.size
     }
     
     var buffer: MTLBuffer!
