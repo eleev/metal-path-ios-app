@@ -14,7 +14,7 @@ protocol MeshProtocol {
     
     // MARK: - Properties
     
-    var vertexData: [Float] { get set}
+    var vertexData: [Vertex] { get set}
     var dataSize: Int { get }
     var buffer: MTLBuffer! { get }
     
