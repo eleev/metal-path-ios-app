@@ -15,11 +15,15 @@ import Foundation
 /// - missingCommandQueue
 /// - couldNotCreateLibrary
 /// - couldNotMakeShaderFunction
+/// - missingRPD
+/// - missing RPS
 enum RenderErrorType: String, Error {
     case missingDrawable = "Rendering drawable was not specified"
     case missingDevice = "Target device is nil or has not been specified"
     case missingComandQueue = "Could not construct Command Queue"
     case couldNotCreateLibrary = "Could not construct Rebderer Library"
     case couldNotMakeShaderFunction = "Shader function could not be made"
+    case missingRPD = "Render Pass Descriptor has not been initialized"
+    case missingRPS = "Render Pieline State has not been set"
 }
 
