@@ -11,6 +11,7 @@ using namespace metal;
 
 struct Vertex {
     float4 position [[position]];
+    float4 color;
 };
 
 vertex Vertex vertex_func(constant Vertex *vertices [[buffer(0)]], uint vid [[vertex_id]]) {
@@ -18,6 +19,6 @@ vertex Vertex vertex_func(constant Vertex *vertices [[buffer(0)]], uint vid [[ve
 }
 
 fragment float4 fragment_func(Vertex vert [[stage_in]]) {
-    return float4(0.7, 1.0, 1.0, 1.0);
+    return vert.color;
 }
 
