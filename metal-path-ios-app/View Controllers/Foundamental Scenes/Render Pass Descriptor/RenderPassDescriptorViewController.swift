@@ -23,9 +23,12 @@ class RenderPassDescriptorViewController: UIViewController {
             return
         }
 
-        renderer = MetalView(frame: view.frame, device: defaultDevice)
-        view = renderer
+        let triangle = TriangleMesh2D(device: defaultDevice)
         
+        renderer = MetalView(frame: view.frame, device: defaultDevice)
+        renderer.buffer = triangle?.buffer
+        
+        view = renderer
     }
 
     override func didReceiveMemoryWarning() {
