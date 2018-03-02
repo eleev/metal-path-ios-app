@@ -22,6 +22,9 @@
 		A9357C7E203C2F5E000EB659 /* metal_path_ios_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9357C7D203C2F5E000EB659 /* metal_path_ios_appUITests.swift */; };
 		A9448CD4203D9CE000DEB924 /* ScenesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9448CD3203D9CE000DEB924 /* ScenesTableViewController.swift */; };
 		A9448CDE203DCC7900DEB924 /* RenderPassDescriptorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9448CDD203DCC7900DEB924 /* RenderPassDescriptorViewController.swift */; };
+		A9575A122049B4E00035431F /* Matrix4f.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9575A112049B4E00035431F /* Matrix4f.swift */; };
+		A9575A142049B9FC0035431F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A9575A132049B9FC0035431F /* .gitignore */; };
+		A9575A162049BA210035431F /* MatrixProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9575A152049BA210035431F /* MatrixProtocol.swift */; };
 		A9E1D50E204061E300CBD08F /* TriangleMesh2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1D50D204061E300CBD08F /* TriangleMesh2D.swift */; };
 		A9E1D5102040631A00CBD08F /* MeshProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1D50F2040631A00CBD08F /* MeshProtocol.swift */; };
 /* End PBXBuildFile section */
@@ -66,6 +69,9 @@
 		A9357C7F203C2F5E000EB659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9448CD3203D9CE000DEB924 /* ScenesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenesTableViewController.swift; sourceTree = "<group>"; };
 		A9448CDD203DCC7900DEB924 /* RenderPassDescriptorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderPassDescriptorViewController.swift; sourceTree = "<group>"; };
+		A9575A112049B4E00035431F /* Matrix4f.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix4f.swift; sourceTree = "<group>"; };
+		A9575A132049B9FC0035431F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		A9575A152049BA210035431F /* MatrixProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixProtocol.swift; sourceTree = "<group>"; };
 		A9E1D50D204061E300CBD08F /* TriangleMesh2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleMesh2D.swift; sourceTree = "<group>"; };
 		A9E1D50F2040631A00CBD08F /* MeshProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +129,7 @@
 		A9357C4C203C2F5D000EB659 = {
 			isa = PBXGroup;
 			children = (
+				A9575A132049B9FC0035431F /* .gitignore */,
 				A9357C57203C2F5E000EB659 /* metal-path-ios-app */,
 				A9357C71203C2F5E000EB659 /* metal-path-ios-appTests */,
 				A9357C7C203C2F5E000EB659 /* metal-path-ios-appUITests */,
@@ -219,6 +226,7 @@
 		A9448CD8203DCB8000DEB924 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A9575A102049B4C60035431F /* Math */,
 				A9E1D50C204061CF00CBD08F /* Mesh */,
 				A9E1D50B2040609F00CBD08F /* Metal View */,
 				A9448CD9203DCB8700DEB924 /* Renderer */,
@@ -256,6 +264,15 @@
 				A9448CDD203DCC7900DEB924 /* RenderPassDescriptorViewController.swift */,
 			);
 			path = "Render Pass Descriptor";
+			sourceTree = "<group>";
+		};
+		A9575A102049B4C60035431F /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				A9575A112049B4E00035431F /* Matrix4f.swift */,
+				A9575A152049BA210035431F /* MatrixProtocol.swift */,
+			);
+			path = Math;
 			sourceTree = "<group>";
 		};
 		A9E1D50B2040609F00CBD08F /* Metal View */ = {
@@ -384,6 +401,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9575A142049B9FC0035431F /* .gitignore in Resources */,
 				A9357C68203C2F5E000EB659 /* LaunchScreen.storyboard in Resources */,
 				A9357C65203C2F5E000EB659 /* Icons.xcassets in Resources */,
 				A9357C63203C2F5E000EB659 /* Main.storyboard in Resources */,
@@ -411,6 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9575A122049B4E00035431F /* Matrix4f.swift in Sources */,
 				A9357C60203C2F5E000EB659 /* Shaders.metal in Sources */,
 				A9448CD4203D9CE000DEB924 /* ScenesTableViewController.swift in Sources */,
 				A9448CDE203DCC7900DEB924 /* RenderPassDescriptorViewController.swift in Sources */,
@@ -420,6 +439,7 @@
 				A92D6911203F43FD002AFB7A /* RenderErrorType.swift in Sources */,
 				A931F06620440E3B009FA7A6 /* PassThrough.metal in Sources */,
 				A9357C5E203C2F5E000EB659 /* TexturedRotatingCubeViewController.swift in Sources */,
+				A9575A162049BA210035431F /* MatrixProtocol.swift in Sources */,
 				A9E1D50E204061E300CBD08F /* TriangleMesh2D.swift in Sources */,
 				A9357C59203C2F5E000EB659 /* AppDelegate.swift in Sources */,
 				A92D690F203EFED0002AFB7A /* MetalView.swift in Sources */,
@@ -588,12 +608,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Metal2";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T3K58FE38R;
+				DEVELOPMENT_TEAM = 5GHFB8ES4Y;
 				INFOPLIST_FILE = "metal-path-ios-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.metal-path-ios-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "metal-path-ios-app/ShaderTypes.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -604,12 +626,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Metal2";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T3K58FE38R;
+				DEVELOPMENT_TEAM = 5GHFB8ES4Y;
 				INFOPLIST_FILE = "metal-path-ios-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.metal-path-ios-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "metal-path-ios-app/ShaderTypes.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
