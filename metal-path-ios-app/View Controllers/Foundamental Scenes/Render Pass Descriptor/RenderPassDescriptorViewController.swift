@@ -11,7 +11,11 @@ import MetalKit
 
 class RenderPassDescriptorViewController: UIViewController {
 
+    // MARK: - Properties
+    
     var renderer: MetalView!
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +33,6 @@ class RenderPassDescriptorViewController: UIViewController {
         renderer.buffer = triangle?.buffer
         
         view = renderer
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     /*
