@@ -22,15 +22,26 @@ class RenderPassDescriptorViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        /// Metal device preperation
         guard let defaultDevice = MTLCreateSystemDefaultDevice() else {
             debugPrint(#function + " Metal API is not supported")
             return
         }
-
-        let triangle = TriangleMesh2D(device: defaultDevice)
         
-        renderer = MetalView(frame: view.frame, device: defaultDevice)
-        renderer.buffer = triangle?.buffer
+        /// Node preperation
+        let triangle = TriangleMesh2D(device: defaultDevice)
+        let node = Node(device: defaultDevice, geometry: triangle!)
+        
+        /// Shader preperation
+        let vertexShader = Shader(type: .vertex, name: "vertexUniformFunc")
+        let fragmentShader = Shader(type: .fragment, name: "fragmentUniformFunc")
+        let pair = ShaderPair(vertexShader: vertexShader, fragmentShader: fragmentShader)
+        
+        /// Metal renderer preperation
+        renderer = MetalView(frame: view.frame, device: defaultDevice, shaders: pair)
+//        renderer.buffer = triangle?.buffer
+        renderer.buffer = node.geometry?.buffer
+        renderer.uniformBuffer = node.modelMatrixBuffer
         
         view = renderer
     }
