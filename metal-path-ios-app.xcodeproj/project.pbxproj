@@ -25,6 +25,8 @@
 		A9575A122049B4E00035431F /* Matrix4f.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9575A112049B4E00035431F /* Matrix4f.swift */; };
 		A9575A142049B9FC0035431F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A9575A132049B9FC0035431F /* .gitignore */; };
 		A9575A162049BA210035431F /* MatrixProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9575A152049BA210035431F /* MatrixProtocol.swift */; };
+		A95AE2C6204EDC1A005ADAD2 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AE2C5204EDC1A005ADAD2 /* Node.swift */; };
+		A95AE2C8204EDC24005ADAD2 /* NodeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AE2C7204EDC24005ADAD2 /* NodeType.swift */; };
 		A95C3CB5204E97ED0062EE88 /* Uniforms.metal in Sources */ = {isa = PBXBuildFile; fileRef = A95C3CB4204E97ED0062EE88 /* Uniforms.metal */; };
 		A95C3CB7204E99C30062EE88 /* Structs.metal in Sources */ = {isa = PBXBuildFile; fileRef = A95C3CB6204E99C30062EE88 /* Structs.metal */; };
 		A9E1D50E204061E300CBD08F /* TriangleMesh2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1D50D204061E300CBD08F /* TriangleMesh2D.swift */; };
@@ -74,6 +76,8 @@
 		A9575A112049B4E00035431F /* Matrix4f.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix4f.swift; sourceTree = "<group>"; };
 		A9575A132049B9FC0035431F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A9575A152049BA210035431F /* MatrixProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixProtocol.swift; sourceTree = "<group>"; };
+		A95AE2C5204EDC1A005ADAD2 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		A95AE2C7204EDC24005ADAD2 /* NodeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeType.swift; sourceTree = "<group>"; };
 		A95C3CB4204E97ED0062EE88 /* Uniforms.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Uniforms.metal; sourceTree = "<group>"; };
 		A95C3CB6204E99C30062EE88 /* Structs.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Structs.metal; sourceTree = "<group>"; };
 		A9E1D50D204061E300CBD08F /* TriangleMesh2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleMesh2D.swift; sourceTree = "<group>"; };
@@ -232,6 +236,7 @@
 		A9448CD8203DCB8000DEB924 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A95AE2C4204EDC0A005ADAD2 /* Node */,
 				A9575A102049B4C60035431F /* Math */,
 				A9E1D50C204061CF00CBD08F /* Mesh */,
 				A9E1D50B2040609F00CBD08F /* Metal View */,
@@ -279,6 +284,15 @@
 				A9575A152049BA210035431F /* MatrixProtocol.swift */,
 			);
 			path = Math;
+			sourceTree = "<group>";
+		};
+		A95AE2C4204EDC0A005ADAD2 /* Node */ = {
+			isa = PBXGroup;
+			children = (
+				A95AE2C5204EDC1A005ADAD2 /* Node.swift */,
+				A95AE2C7204EDC24005ADAD2 /* NodeType.swift */,
+			);
+			path = Node;
 			sourceTree = "<group>";
 		};
 		A9E1D50B2040609F00CBD08F /* Metal View */ = {
@@ -438,6 +452,7 @@
 				A9575A122049B4E00035431F /* Matrix4f.swift in Sources */,
 				A9357C60203C2F5E000EB659 /* Shaders.metal in Sources */,
 				A9448CD4203D9CE000DEB924 /* ScenesTableViewController.swift in Sources */,
+				A95AE2C8204EDC24005ADAD2 /* NodeType.swift in Sources */,
 				A9448CDE203DCC7900DEB924 /* RenderPassDescriptorViewController.swift in Sources */,
 				A9357C5C203C2F5E000EB659 /* Renderer.swift in Sources */,
 				A9E1D5102040631A00CBD08F /* MeshProtocol.swift in Sources */,
@@ -445,6 +460,7 @@
 				A931F06820442E51009FA7A6 /* Vertex.swift in Sources */,
 				A92D6911203F43FD002AFB7A /* RenderErrorType.swift in Sources */,
 				A931F06620440E3B009FA7A6 /* PassThrough.metal in Sources */,
+				A95AE2C6204EDC1A005ADAD2 /* Node.swift in Sources */,
 				A9357C5E203C2F5E000EB659 /* TexturedRotatingCubeViewController.swift in Sources */,
 				A9575A162049BA210035431F /* MatrixProtocol.swift in Sources */,
 				A9E1D50E204061E300CBD08F /* TriangleMesh2D.swift in Sources */,
