@@ -19,8 +19,10 @@ class MetalView: MTKView {
     
     // MARK: - Properties
     
-    var vertexShaderName = "vertex_func"
-    var fragmentShaderName = "fragment_func"
+//    var vertexShaderName = "vertex_func"
+//    var fragmentShaderName = "fragment_func"
+    
+    var shaderPair: ShaderPair
     
     var buffer: MTLBuffer?
     var uniformBuffer: MTLBuffer?
@@ -35,11 +37,16 @@ class MetalView: MTKView {
     
     // MARK: - Initilziers
     
-    override init(frame frameRect: CGRect, device: MTLDevice?) {
+    init(frame frameRect: CGRect, device: MTLDevice?, shaders pair: ShaderPair) {
+        self.shaderPair = pair
+        
         super.init(frame: frameRect, device: device)
         self.device = device
         
         do {
+            let vertexShaderName = pair.vertexShader.name
+            let fragmentShaderName = pair.fragmentShader.name
+            
             let shadersPair = try attachShaderPair(vertexShaderName: vertexShaderName, fragmentShaderName: fragmentShaderName)
             let renderPipelineDescriptor = createRenderPipelineDescriptor(shaders: shadersPair)
             
