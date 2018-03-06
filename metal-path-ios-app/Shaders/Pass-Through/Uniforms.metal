@@ -7,16 +7,8 @@
 //
 
 #include <metal_stdlib>
+#import "Structs.metal"
 using namespace metal;
-
-struct Uniforms {
-    float4x4 modelMatrix;
-};
-
-struct Vertex {
-    float4 position [[position]];
-    float4 color;
-};
 
 vertex Vertex vertexUniformFunc(constant Vertex *vertices [[buffer(0)]], constant Uniforms &uniforms [[buffer(1)]], uint vid [[vertex_id]]) {
     
