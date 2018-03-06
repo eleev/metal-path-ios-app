@@ -10,25 +10,38 @@ import Foundation
 import MetalKit
 
 class Node: NodeType {
-    
+   
     // MARK: - Properties
     
-    var name: String
-    var parentNode: NodeType
-    var childNodes: [NodeType]
+    var device: MTLDevice
     
-    var modelMatrix: Matrix4f
-    var geometry: MTLBuffer
+    var name: String = ""
+    var parentNode: NodeType?
+    var childNodes: [NodeType] = []
+    
+    var modelMatrix: Matrix4f = Matrix4f()
+    var geometry: MeshProtocol?
+    
+    // MARK: - Private properties
+    
+    private(set) var modelMatrixBuffer: MTLBuffer?
     
     // MARK: - Initializers
     
-    required init(geometry: MTLBuffer) {
-        fatalError(#function + " requires implementation")
+    required init(device: MTLDevice) {
+        self.device = device
+        prepareModelBuffer()
+    }
+    
+    required init(device: MTLDevice, geometry: MeshProtocol) {
+        self.device = device
+        self.geometry = geometry
+        prepareModelBuffer()
     }
     
     // MARK: - Methods
     
-    func updateGeometry(buffer: MTLBuffer) {
+    func update(geometry: MeshProtocol) {
         fatalError(#function + " requires implementation")
     }
     
@@ -40,4 +53,14 @@ class Node: NodeType {
         fatalError(#function + " requires implementation")
     }
     
+    
+    // MARK: - Private methods
+    
+    /// Prepares metal buffer data to be sent to the GPU
+    private func prepareModelBuffer() {
+        let memoryLayout = MemoryLayout<Float>.size * 16
+        modelMatrixBuffer = device.makeBuffer(length: memoryLayout, options: [])
+        let bufferPointer = modelMatrixBuffer?.contents()
+        memcpy(bufferPointer, modelMatrix.data, memoryLayout)
+    }
 }
