@@ -25,6 +25,7 @@
 		A9575A122049B4E00035431F /* Matrix4f.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9575A112049B4E00035431F /* Matrix4f.swift */; };
 		A9575A142049B9FC0035431F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A9575A132049B9FC0035431F /* .gitignore */; };
 		A9575A162049BA210035431F /* MatrixProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9575A152049BA210035431F /* MatrixProtocol.swift */; };
+		A95C3CB5204E97ED0062EE88 /* Uniforms.metal in Sources */ = {isa = PBXBuildFile; fileRef = A95C3CB4204E97ED0062EE88 /* Uniforms.metal */; };
 		A9E1D50E204061E300CBD08F /* TriangleMesh2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1D50D204061E300CBD08F /* TriangleMesh2D.swift */; };
 		A9E1D5102040631A00CBD08F /* MeshProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1D50F2040631A00CBD08F /* MeshProtocol.swift */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 		A9575A112049B4E00035431F /* Matrix4f.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix4f.swift; sourceTree = "<group>"; };
 		A9575A132049B9FC0035431F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A9575A152049BA210035431F /* MatrixProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixProtocol.swift; sourceTree = "<group>"; };
+		A95C3CB4204E97ED0062EE88 /* Uniforms.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Uniforms.metal; sourceTree = "<group>"; };
 		A9E1D50D204061E300CBD08F /* TriangleMesh2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleMesh2D.swift; sourceTree = "<group>"; };
 		A9E1D50F2040631A00CBD08F /* MeshProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				A931F06520440E3B009FA7A6 /* PassThrough.metal */,
+				A95C3CB4204E97ED0062EE88 /* Uniforms.metal */,
 			);
 			path = "Pass-Through";
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				A9E1D50E204061E300CBD08F /* TriangleMesh2D.swift in Sources */,
 				A9357C59203C2F5E000EB659 /* AppDelegate.swift in Sources */,
 				A92D690F203EFED0002AFB7A /* MetalView.swift in Sources */,
+				A95C3CB5204E97ED0062EE88 /* Uniforms.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
