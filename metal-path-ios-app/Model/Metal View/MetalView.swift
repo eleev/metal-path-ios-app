@@ -23,6 +23,7 @@ class MetalView: MTKView {
     var fragmentShaderName = "fragment_func"
     
     var buffer: MTLBuffer?
+    var uniformBuffer: MTLBuffer?
     
     // MARK: - Private properties
     
