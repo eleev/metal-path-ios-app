@@ -21,20 +21,23 @@ protocol NodeType {
     
     // MARK: - Properties
     
+    var device: MTLDevice { get }
+    
     var name: String { get set }
-    var parentNode: NodeType { get set }
+    var parentNode: NodeType? { get set }
     var childNodes: [NodeType] { get set }
     
     var modelMatrix: Matrix4f { get set }
-    var geometry: MTLBuffer { get }
+    var geometry: MeshProtocol? { get }
     
     // MARK: - Initializers
     
-    init(geometry: MTLBuffer)
+    init(device: MTLDevice)
+    init(device: MTLDevice, geometry: MeshProtocol)
     
     // MARK: - Methods
     
-    func updateGeometry(buffer: MTLBuffer)
+    func update(geometry: MeshProtocol)
     func remove(child node: NodeType)
     func remove()
 
