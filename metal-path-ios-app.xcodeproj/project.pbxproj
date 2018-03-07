@@ -654,10 +654,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Metal2";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5GHFB8ES4Y;
+				DEVELOPMENT_TEAM = T3K58FE38R;
 				INFOPLIST_FILE = "metal-path-ios-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.metal-path-ios-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.io.metal-path-ios-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "metal-path-ios-app/ShaderTypes.h";
@@ -672,10 +672,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Metal2";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5GHFB8ES4Y;
+				DEVELOPMENT_TEAM = T3K58FE38R;
 				INFOPLIST_FILE = "metal-path-ios-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.metal-path-ios-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.io.metal-path-ios-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "metal-path-ios-app/ShaderTypes.h";
