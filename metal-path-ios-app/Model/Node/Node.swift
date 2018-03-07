@@ -54,10 +54,10 @@ class Node: NodeType {
     }
     
     
-    // MARK: - Private methods
+    // MARK: - Utility methods
     
     /// Prepares metal buffer data to be sent to the GPU
-    private func prepareModelBuffer() {
+    func prepareModelBuffer() {
         let memoryLayout = MemoryLayout<Float>.size * 16
         modelMatrixBuffer = device.makeBuffer(length: memoryLayout, options: [])
         let bufferPointer = modelMatrixBuffer?.contents()
