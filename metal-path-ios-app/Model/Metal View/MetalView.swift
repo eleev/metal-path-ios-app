@@ -95,10 +95,13 @@ class MetalView: MTKView {
         
         if let buffer = buffer {
             defaultRenderCommandEncoder?.setVertexBuffer(buffer, offset: 0, index: 0)
+            defaultRenderCommandEncoder?.setVertexBuffer(uniformBuffer, offset: 0, index: 1)
+
             // TODO: refactor magic numbers
+            // Primitive drawing
             defaultRenderCommandEncoder?.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: 3, instanceCount: 1)
         } else {
-            fatalError("No MTLBuffer has been found! The application will be interrupted")
+            fatalError("No Vertex MTLBuffer has been found! The application will be interrupted")
         }
         
         // Make sure that current drawable exsists
