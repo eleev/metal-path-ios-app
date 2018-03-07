@@ -31,7 +31,7 @@ struct Matrix4f: MatrixProtocol {
     
     // MARK: - Methods
     
-    func translate(matrix: Matrix4f, _ position: float3) -> Matrix4f {
+    static func translate(matrix: Matrix4f, _ position: float3) -> Matrix4f {
         var matrix = matrix
         
         matrix.data[12] = position.x
@@ -41,7 +41,7 @@ struct Matrix4f: MatrixProtocol {
         return matrix
     }
     
-    func scale(matrix: Matrix4f, factor: float3) -> Matrix4f {
+    static func scale(matrix: Matrix4f, factor: float3) -> Matrix4f {
         var matrix = matrix
         
         matrix.data[0] = factor.x
@@ -51,7 +51,7 @@ struct Matrix4f: MatrixProtocol {
         return matrix
     }
     
-    func rotate(matrix: Matrix4f, rotation: float3) -> Matrix4f {
+    static func rotate(matrix: Matrix4f, rotation: float3) -> Matrix4f {
         var matrix = matrix
         
         matrix.data[0] = cos(rotation.y) * cos(rotation.z)
