@@ -41,7 +41,7 @@ class GradientViewController: UIViewController {
     
     func prepare() {
         let rayTracer = RayTracer()
-        let pixelSet = rayTracer.makePixelSet(width: 600, height: 400)
+        let pixelSet = rayTracer.makeGradientPixelSet(width: 600, height: 400)
         let image = rayTracer.render(pixelSet: pixelSet)
         
         let uimage = UIImage(ciImage: image)

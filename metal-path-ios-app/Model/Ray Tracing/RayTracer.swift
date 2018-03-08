@@ -17,7 +17,7 @@ struct RayTracer {
     
     // MARK: - Methods
     
-    func makePixelSet(width: Int, height: Int) -> PixelSet {
+    func makeGradientPixelSet(width: Int, height: Int) -> PixelSet {
         
         var pixel = Pixel(r: 0, g: 0, b: 0, a: 255)
         var pixels = [Pixel](repeating: pixel, count: width * height)
@@ -30,6 +30,22 @@ struct RayTracer {
                 let alpha: UInt8 = 255
                 
                 pixel = Pixel(r: red, g: green, b: blue, a: alpha)
+                pixels[x + y * width] = pixel
+            }
+        }
+        
+        return PixelSet(pixels: pixels, width: width, height: height)
+    }
+    
+    func makeGradientPixelSet(width: Int, height: Int, computePixel: @escaping (_ x: Int, _ y: Int, _ width: Int, _ height: Int)->Pixel) -> PixelSet {
+        
+        var pixel = Pixel(r: 0, g: 0, b: 0, a: 255)
+        var pixels = [Pixel](repeating: pixel, count: width * height)
+        
+        for x in 0..<width {
+            for y in 0..<height {
+                let computedPixel = computePixel(x, y, width, height)
+                pixel = computedPixel
                 pixels[x + y * width] = pixel
             }
         }
