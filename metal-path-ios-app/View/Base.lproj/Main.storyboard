@@ -24,7 +24,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSj-rQ-Moa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1296" y="-411"/>
+            <point key="canvasLocation" x="468" y="-570"/>
+        </scene>
+        <!--Gradient Rendering-->
+        <scene sceneID="9dp-8I-paT">
+            <objects>
+                <viewController id="nQq-V7-OV0" customClass="GradientViewController" customModule="metal_path_ios_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f8q-ms-L6F">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="39K-1n-1UB">
+                                <rect key="frame" x="0.0" y="64" width="834" height="1048"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uBR-HD-dnx" firstAttribute="trailing" secondItem="39K-1n-1UB" secondAttribute="trailing" id="3qG-ux-jgG"/>
+                            <constraint firstItem="39K-1n-1UB" firstAttribute="top" secondItem="uBR-HD-dnx" secondAttribute="top" id="EaB-lp-Ngg"/>
+                            <constraint firstItem="39K-1n-1UB" firstAttribute="leading" secondItem="uBR-HD-dnx" secondAttribute="leading" id="eIY-XQ-1oF"/>
+                            <constraint firstItem="uBR-HD-dnx" firstAttribute="bottom" secondItem="39K-1n-1UB" secondAttribute="bottom" id="lTI-QQ-xCQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uBR-HD-dnx"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Gradient Rendering" id="eG5-QO-Wus"/>
+                    <connections>
+                        <outlet property="imageView" destination="39K-1n-1UB" id="bd9-8Q-3oE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ueb-Hc-rfl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1304" y="145"/>
         </scene>
         <!--Textured, Rotating Cube-->
         <scene sceneID="tXr-a1-R10">
@@ -40,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1297" y="516"/>
+            <point key="canvasLocation" x="468" y="906"/>
         </scene>
         <!--Metal Sandbox-->
         <scene sceneID="Fih-TB-RGZ">
@@ -87,7 +117,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Basic" id="53D-GF-IOW">
+                            <tableViewSection headerTitle="Intermediate" id="53D-GF-IOW">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="MII-u7-XHa" detailTextLabel="S8v-zo-TWM" imageView="cYN-0Z-jdB" rowHeight="100" style="IBUITableViewCellStyleSubtitle" id="O0w-9A-MMi">
                                         <rect key="frame" x="0.0" y="156" width="834" height="100"/>
@@ -103,8 +133,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S8v-zo-TWM">
-                                                    <rect key="frame" x="99" y="53.5" width="44" height="14.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Scene demostrates how to render Qube with qube texture mapping technique" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S8v-zo-TWM">
+                                                    <rect key="frame" x="99" y="53.5" width="439.5" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -118,6 +148,41 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="BV1-FR-VrT" kind="show" id="VFu-0U-Jni"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Ray Tracing" id="bp5-Ap-EUE">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="pd4-YO-DES" detailTextLabel="Jqd-Dk-8W9" imageView="JnM-zQ-wie" rowHeight="100" style="IBUITableViewCellStyleSubtitle" id="3BI-K0-7HY">
+                                        <rect key="frame" x="0.0" y="284" width="834" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3BI-K0-7HY" id="cjA-l0-djE">
+                                            <rect key="frame" x="0.0" y="0.0" width="796" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Gradient" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pd4-YO-DES">
+                                                    <rect key="frame" x="99" y="30" width="66" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Ray Tracer sample that demostraes gradient rendering " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jqd-Dk-8W9">
+                                                    <rect key="frame" x="99" y="53.5" width="312" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="New Scene" id="JnM-zQ-wie">
+                                                    <rect key="frame" x="20" y="17" width="64" height="64"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="nQq-V7-OV0" kind="show" id="XpY-b2-8Oo"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
