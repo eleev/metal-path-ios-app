@@ -19,9 +19,6 @@ class MetalView: MTKView {
     
     // MARK: - Properties
     
-//    var vertexShaderName = "vertex_func"
-//    var fragmentShaderName = "fragment_func"
-    
     var shaderPair: ShaderPair
     
     var buffer: MTLBuffer?
@@ -34,6 +31,8 @@ class MetalView: MTKView {
     private(set) var defaultCommandQueue: MTLCommandQueue?
     private(set) var defaultCommandBuffer: MTLCommandBuffer?
     private(set) var defaultRenderCommandEncoder: MTLRenderCommandEncoder?
+    private(set) var defaultRenderPassDescriptor: MTLRenderPassDescriptor?
+    
     
     // MARK: - Initilziers
     
@@ -51,9 +50,11 @@ class MetalView: MTKView {
             let renderPipelineDescriptor = createRenderPipelineDescriptor(shaders: shadersPair)
             
             renderPipelineState = try self.device?.makeRenderPipelineState(descriptor: renderPipelineDescriptor)
+            
         } catch {
             debugPrint(#function + " raised error: ", error)
         }
+        
     }
     
     required init(coder: NSCoder) {
@@ -64,6 +65,8 @@ class MetalView: MTKView {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
+        
+        defaultRenderPassDescriptor = prepareRenderPassDescriptor()
         
         do {
             try render()
@@ -80,11 +83,14 @@ class MetalView: MTKView {
     private func render() throws {
 
         guard let renderPipelineState = renderPipelineState else {
-            debugPrint(#function + " render pipeline state has not been set or smething went horribly wrong")
+            debugPrint(#function + " render pipeline state has not been set or something went horribly wrong")
             throw RenderErrorType.missingRPS
         }
-        
-        let defaultRenderPassDescriptor = prepareRenderPassDescriptor()
+
+        guard let defaultRenderPassDescriptor = defaultRenderPassDescriptor else {
+            debugPrint(#function + " render pass descriptor has not been set or something went horribly wrong")
+            throw RenderErrorType.missingRPS
+        }
         
         // Create default queues and buffers
         defaultCommandQueue = device?.makeCommandQueue()
