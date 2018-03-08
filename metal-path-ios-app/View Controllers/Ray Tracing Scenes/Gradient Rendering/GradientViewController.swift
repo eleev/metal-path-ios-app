@@ -12,6 +12,10 @@ class GradientViewController: UIViewController {
 
     // MARK: - Properties
     
+    let rayTracer = RayTracer()
+    
+    // MARK: - Outlets
+    
     @IBOutlet weak var imageView: UIImageView!
     
     // MARK: - Lifecycle
@@ -20,11 +24,9 @@ class GradientViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        prepare()
+        
+        let image = prepareCustom()
+        imageView.image = image
     }
 
     /*
@@ -39,14 +41,30 @@ class GradientViewController: UIViewController {
 
     // MARK: - Utility
     
-    func prepare() {
-        let rayTracer = RayTracer()
+    func prepareGradient() -> UIImage {
         let pixelSet = rayTracer.makeGradientPixelSet(width: 600, height: 400)
         let image = rayTracer.render(pixelSet: pixelSet)
         
         let uimage = UIImage(ciImage: image)
-        
-        imageView.image = uimage
+        return uimage
     }
+    
+    func prepareCustom() -> UIImage {
+        let pixelSet = rayTracer.makeGradientPixelSet(width: 600, height: 800) { (x, y, width, height) -> Pixel in
+
+            let red = UInt8(Double(y * 255 / height))
+            let green = UInt8(Double(x * 255 / width))
+            let blue = UInt8(Double(y * 255 / height))
+            
+            let pixel = Pixel(r: red, g: green, b: blue, a: 255)
+            return pixel
+        }
+        let image = rayTracer.render(pixelSet: pixelSet)
+        
+        let uimage = UIImage(ciImage: image)
+        return uimage
+    }
+    
+    
     
 }
