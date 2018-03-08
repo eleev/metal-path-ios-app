@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A90470E020511D9F004CDCEC /* GradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90470DF20511D9F004CDCEC /* GradientViewController.swift */; };
+		A90470E22051204A004CDCEC /* Ray.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90470E12051204A004CDCEC /* Ray.swift */; };
 		A92D690F203EFED0002AFB7A /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D690E203EFED0002AFB7A /* MetalView.swift */; };
 		A92D6911203F43FD002AFB7A /* RenderErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D6910203F43FD002AFB7A /* RenderErrorType.swift */; };
 		A931F06620440E3B009FA7A6 /* PassThrough.metal in Sources */ = {isa = PBXBuildFile; fileRef = A931F06520440E3B009FA7A6 /* PassThrough.metal */; };
@@ -32,6 +34,8 @@
 		A95AE2CF204EE4E7005ADAD2 /* ShaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AE2CE204EE4E7005ADAD2 /* ShaderType.swift */; };
 		A95C3CB5204E97ED0062EE88 /* Uniforms.metal in Sources */ = {isa = PBXBuildFile; fileRef = A95C3CB4204E97ED0062EE88 /* Uniforms.metal */; };
 		A95C3CB7204E99C30062EE88 /* Structs.metal in Sources */ = {isa = PBXBuildFile; fileRef = A95C3CB6204E99C30062EE88 /* Structs.metal */; };
+		A9C2FE0620510ED4009C83D0 /* Pixel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C2FE0520510ED4009C83D0 /* Pixel.swift */; };
+		A9C2FE0820511BA0009C83D0 /* RayTracer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C2FE0720511BA0009C83D0 /* RayTracer.swift */; };
 		A9E1D50E204061E300CBD08F /* TriangleMesh2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1D50D204061E300CBD08F /* TriangleMesh2D.swift */; };
 		A9E1D5102040631A00CBD08F /* MeshProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1D50F2040631A00CBD08F /* MeshProtocol.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A90470DF20511D9F004CDCEC /* GradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientViewController.swift; sourceTree = "<group>"; };
+		A90470E12051204A004CDCEC /* Ray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ray.swift; sourceTree = "<group>"; };
 		A92D690E203EFED0002AFB7A /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
 		A92D6910203F43FD002AFB7A /* RenderErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderErrorType.swift; sourceTree = "<group>"; };
 		A931F06520440E3B009FA7A6 /* PassThrough.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = PassThrough.metal; sourceTree = "<group>"; };
@@ -86,6 +92,8 @@
 		A95AE2CE204EE4E7005ADAD2 /* ShaderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderType.swift; sourceTree = "<group>"; };
 		A95C3CB4204E97ED0062EE88 /* Uniforms.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Uniforms.metal; sourceTree = "<group>"; };
 		A95C3CB6204E99C30062EE88 /* Structs.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Structs.metal; sourceTree = "<group>"; };
+		A9C2FE0520510ED4009C83D0 /* Pixel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pixel.swift; sourceTree = "<group>"; };
+		A9C2FE0720511BA0009C83D0 /* RayTracer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RayTracer.swift; sourceTree = "<group>"; };
 		A9E1D50D204061E300CBD08F /* TriangleMesh2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleMesh2D.swift; sourceTree = "<group>"; };
 		A9E1D50F2040631A00CBD08F /* MeshProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +123,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A90470DD20511D42004CDCEC /* Ray Tracing Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A90470DE20511D85004CDCEC /* Gradient Rendering */,
+			);
+			path = "Ray Tracing Scenes";
+			sourceTree = "<group>";
+		};
+		A90470DE20511D85004CDCEC /* Gradient Rendering */ = {
+			isa = PBXGroup;
+			children = (
+				A90470DF20511D9F004CDCEC /* GradientViewController.swift */,
+			);
+			path = "Gradient Rendering";
+			sourceTree = "<group>";
+		};
 		A92D6701203C390700F02EBB /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +227,7 @@
 				A9448CD0203D9C9900DEB924 /* Scene List */,
 				A9448CDA203DCC2400DEB924 /* Foundamental Scenes */,
 				A9448CDB203DCC3300DEB924 /* Intermediate Scenes */,
+				A90470DD20511D42004CDCEC /* Ray Tracing Scenes */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -242,6 +267,7 @@
 		A9448CD8203DCB8000DEB924 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A9C2FE0420510EC7009C83D0 /* Ray Tracing */,
 				A95AE2C9204EE4AB005ADAD2 /* Shader */,
 				A95AE2C4204EDC0A005ADAD2 /* Node */,
 				A9575A102049B4C60035431F /* Math */,
@@ -310,6 +336,16 @@
 				A95AE2CE204EE4E7005ADAD2 /* ShaderType.swift */,
 			);
 			path = Shader;
+			sourceTree = "<group>";
+		};
+		A9C2FE0420510EC7009C83D0 /* Ray Tracing */ = {
+			isa = PBXGroup;
+			children = (
+				A9C2FE0520510ED4009C83D0 /* Pixel.swift */,
+				A9C2FE0720511BA0009C83D0 /* RayTracer.swift */,
+				A90470E12051204A004CDCEC /* Ray.swift */,
+			);
+			path = "Ray Tracing";
 			sourceTree = "<group>";
 		};
 		A9E1D50B2040609F00CBD08F /* Metal View */ = {
@@ -470,11 +506,13 @@
 				A9357C60203C2F5E000EB659 /* Shaders.metal in Sources */,
 				A9448CD4203D9CE000DEB924 /* ScenesTableViewController.swift in Sources */,
 				A95AE2C8204EDC24005ADAD2 /* NodeType.swift in Sources */,
+				A90470E22051204A004CDCEC /* Ray.swift in Sources */,
 				A9448CDE203DCC7900DEB924 /* RenderPassDescriptorViewController.swift in Sources */,
 				A9357C5C203C2F5E000EB659 /* Renderer.swift in Sources */,
 				A9E1D5102040631A00CBD08F /* MeshProtocol.swift in Sources */,
 				A95C3CB7204E99C30062EE88 /* Structs.metal in Sources */,
 				A95AE2CF204EE4E7005ADAD2 /* ShaderType.swift in Sources */,
+				A9C2FE0820511BA0009C83D0 /* RayTracer.swift in Sources */,
 				A931F06820442E51009FA7A6 /* Vertex.swift in Sources */,
 				A92D6911203F43FD002AFB7A /* RenderErrorType.swift in Sources */,
 				A931F06620440E3B009FA7A6 /* PassThrough.metal in Sources */,
@@ -482,8 +520,10 @@
 				A9357C5E203C2F5E000EB659 /* TexturedRotatingCubeViewController.swift in Sources */,
 				A9575A162049BA210035431F /* MatrixProtocol.swift in Sources */,
 				A95AE2CD204EE4C4005ADAD2 /* ShaderPair.swift in Sources */,
+				A9C2FE0620510ED4009C83D0 /* Pixel.swift in Sources */,
 				A9E1D50E204061E300CBD08F /* TriangleMesh2D.swift in Sources */,
 				A95AE2CB204EE4BC005ADAD2 /* Shader.swift in Sources */,
+				A90470E020511D9F004CDCEC /* GradientViewController.swift in Sources */,
 				A9357C59203C2F5E000EB659 /* AppDelegate.swift in Sources */,
 				A92D690F203EFED0002AFB7A /* MetalView.swift in Sources */,
 				A95C3CB5204E97ED0062EE88 /* Uniforms.metal in Sources */,
