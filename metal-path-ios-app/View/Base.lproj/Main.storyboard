@@ -54,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ueb-Hc-rfl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1304" y="145"/>
+            <point key="canvasLocation" x="1342" y="-570"/>
         </scene>
         <!--Textured, Rotating Cube-->
         <scene sceneID="tXr-a1-R10">
@@ -105,7 +105,7 @@
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="New Scene" id="h88-Fk-eLD">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Idea Scene " id="h88-Fk-eLD">
                                                     <rect key="frame" x="20" y="17" width="64" height="64"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
@@ -140,7 +140,7 @@
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="New Scene" id="cYN-0Z-jdB">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Idea Scene " id="cYN-0Z-jdB">
                                                     <rect key="frame" x="20" y="17" width="64" height="64"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
@@ -185,6 +185,37 @@
                                             <segue destination="nQq-V7-OV0" kind="show" id="XpY-b2-8Oo"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="aJT-CP-a4h" detailTextLabel="OD8-Dl-Lvd" imageView="9IQ-2V-5bw" rowHeight="100" style="IBUITableViewCellStyleSubtitle" id="iXq-6T-LH8">
+                                        <rect key="frame" x="0.0" y="384" width="834" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iXq-6T-LH8" id="Olj-uB-4Sv">
+                                            <rect key="frame" x="0.0" y="0.0" width="796" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="2D Sphere" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aJT-CP-a4h">
+                                                    <rect key="frame" x="99" y="30" width="81" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Raw Tracer sample that demostrates 2D sphere drawing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OD8-Dl-Lvd">
+                                                    <rect key="frame" x="99" y="53.5" width="317" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="New Scene" id="9IQ-2V-5bw">
+                                                    <rect key="frame" x="20" y="17" width="64" height="64"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="WrU-8W-LvV" kind="show" id="iSg-EO-8JA"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -198,6 +229,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jIR-Ys-B5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="467.6258992805756" y="144.60431654676259"/>
+        </scene>
+        <!--2D Sphere Tracing-->
+        <scene sceneID="8Ij-w3-aES">
+            <objects>
+                <viewController id="WrU-8W-LvV" customClass="_DSphereTracingViewController" customModule="metal_path_ios_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kWa-OX-pZB">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AJe-VE-WPs">
+                                <rect key="frame" x="0.0" y="64" width="834" height="1048"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="81h-rg-FIi" firstAttribute="trailing" secondItem="AJe-VE-WPs" secondAttribute="trailing" id="8jw-Af-4BI"/>
+                            <constraint firstItem="AJe-VE-WPs" firstAttribute="leading" secondItem="81h-rg-FIi" secondAttribute="leading" id="HAr-Le-ozO"/>
+                            <constraint firstItem="AJe-VE-WPs" firstAttribute="top" secondItem="81h-rg-FIi" secondAttribute="top" id="HXZ-b8-Se3"/>
+                            <constraint firstItem="81h-rg-FIi" firstAttribute="bottom" secondItem="AJe-VE-WPs" secondAttribute="bottom" id="X7y-A4-1by"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="81h-rg-FIi"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="2D Sphere Tracing" id="w4H-93-B7P"/>
+                    <connections>
+                        <outlet property="imageView" destination="AJe-VE-WPs" id="DM0-1r-FyB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IDU-o1-HGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1342" y="906"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E6O-Ql-SAz">
@@ -220,6 +281,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Idea Scene " width="64" height="64"/>
         <image name="New Scene" width="64" height="64"/>
     </resources>
 </document>
