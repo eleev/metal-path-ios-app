@@ -34,6 +34,8 @@
 		A95AE2CF204EE4E7005ADAD2 /* ShaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AE2CE204EE4E7005ADAD2 /* ShaderType.swift */; };
 		A95C3CB5204E97ED0062EE88 /* Uniforms.metal in Sources */ = {isa = PBXBuildFile; fileRef = A95C3CB4204E97ED0062EE88 /* Uniforms.metal */; };
 		A95C3CB7204E99C30062EE88 /* Structs.metal in Sources */ = {isa = PBXBuildFile; fileRef = A95C3CB6204E99C30062EE88 /* Structs.metal */; };
+		A9ABFF8A20525DB600B5575A /* float3+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ABFF8920525DB600B5575A /* float3+utils.swift */; };
+		A9ABFF8E20525F6900B5575A /* 2DSphereTracingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ABFF8D20525F6900B5575A /* 2DSphereTracingViewController.swift */; };
 		A9C2FE0620510ED4009C83D0 /* Pixel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C2FE0520510ED4009C83D0 /* Pixel.swift */; };
 		A9C2FE0820511BA0009C83D0 /* RayTracer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C2FE0720511BA0009C83D0 /* RayTracer.swift */; };
 		A9E1D50E204061E300CBD08F /* TriangleMesh2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1D50D204061E300CBD08F /* TriangleMesh2D.swift */; };
@@ -92,6 +94,8 @@
 		A95AE2CE204EE4E7005ADAD2 /* ShaderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderType.swift; sourceTree = "<group>"; };
 		A95C3CB4204E97ED0062EE88 /* Uniforms.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Uniforms.metal; sourceTree = "<group>"; };
 		A95C3CB6204E99C30062EE88 /* Structs.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Structs.metal; sourceTree = "<group>"; };
+		A9ABFF8920525DB600B5575A /* float3+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "float3+utils.swift"; sourceTree = "<group>"; };
+		A9ABFF8D20525F6900B5575A /* 2DSphereTracingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2DSphereTracingViewController.swift; sourceTree = "<group>"; };
 		A9C2FE0520510ED4009C83D0 /* Pixel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pixel.swift; sourceTree = "<group>"; };
 		A9C2FE0720511BA0009C83D0 /* RayTracer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RayTracer.swift; sourceTree = "<group>"; };
 		A9E1D50D204061E300CBD08F /* TriangleMesh2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleMesh2D.swift; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				A90470DE20511D85004CDCEC /* Gradient Rendering */,
+				A9ABFF8B20525F4700B5575A /* 2D Sphere Tracing */,
 			);
 			path = "Ray Tracing Scenes";
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 		A9448CD8203DCB8000DEB924 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A9ABFF8820525DA500B5575A /* Extensions */,
 				A9C2FE0420510EC7009C83D0 /* Ray Tracing */,
 				A95AE2C9204EE4AB005ADAD2 /* Shader */,
 				A95AE2C4204EDC0A005ADAD2 /* Node */,
@@ -336,6 +342,22 @@
 				A95AE2CE204EE4E7005ADAD2 /* ShaderType.swift */,
 			);
 			path = Shader;
+			sourceTree = "<group>";
+		};
+		A9ABFF8820525DA500B5575A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A9ABFF8920525DB600B5575A /* float3+utils.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A9ABFF8B20525F4700B5575A /* 2D Sphere Tracing */ = {
+			isa = PBXGroup;
+			children = (
+				A9ABFF8D20525F6900B5575A /* 2DSphereTracingViewController.swift */,
+			);
+			path = "2D Sphere Tracing";
 			sourceTree = "<group>";
 		};
 		A9C2FE0420510EC7009C83D0 /* Ray Tracing */ = {
@@ -508,6 +530,7 @@
 				A95AE2C8204EDC24005ADAD2 /* NodeType.swift in Sources */,
 				A90470E22051204A004CDCEC /* Ray.swift in Sources */,
 				A9448CDE203DCC7900DEB924 /* RenderPassDescriptorViewController.swift in Sources */,
+				A9ABFF8A20525DB600B5575A /* float3+utils.swift in Sources */,
 				A9357C5C203C2F5E000EB659 /* Renderer.swift in Sources */,
 				A9E1D5102040631A00CBD08F /* MeshProtocol.swift in Sources */,
 				A95C3CB7204E99C30062EE88 /* Structs.metal in Sources */,
@@ -515,6 +538,7 @@
 				A9C2FE0820511BA0009C83D0 /* RayTracer.swift in Sources */,
 				A931F06820442E51009FA7A6 /* Vertex.swift in Sources */,
 				A92D6911203F43FD002AFB7A /* RenderErrorType.swift in Sources */,
+				A9ABFF8E20525F6900B5575A /* 2DSphereTracingViewController.swift in Sources */,
 				A931F06620440E3B009FA7A6 /* PassThrough.metal in Sources */,
 				A95AE2C6204EDC1A005ADAD2 /* Node.swift in Sources */,
 				A9357C5E203C2F5E000EB659 /* TexturedRotatingCubeViewController.swift in Sources */,
