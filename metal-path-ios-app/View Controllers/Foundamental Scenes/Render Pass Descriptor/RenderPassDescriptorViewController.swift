@@ -43,8 +43,8 @@ class RenderPassDescriptorViewController: UIViewController {
         
         /// Metal renderer preperation
         renderer = MetalView(frame: view.frame, device: defaultDevice, shaders: pair)
-//        renderer.buffer = triangle?.buffer
-        renderer.buffer = node.geometry?.buffer
+        renderer.vertexBuffer = node.geometry?.vertexBuffer
+        renderer.indexBuffer = node.geometry?.indexBuffer
         renderer.uniformBuffer = node.modelMatrixBuffer
         
         
