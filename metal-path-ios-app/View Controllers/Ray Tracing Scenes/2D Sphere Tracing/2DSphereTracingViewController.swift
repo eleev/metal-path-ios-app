@@ -40,7 +40,7 @@ class _DSphereTracingViewController: UIViewController {
     // MARK: - Utility
     
     private func prepare() -> UIImage {
-        let pixelSet = rayTracer.makeSpherePixelSet(width: 1000, height: 1000)
+        let pixelSet = rayTracer.makeSpherePixelSet(width: 1000, height: 500)
         let renderedImage = rayTracer.render(pixelSet: pixelSet)
         return UIImage(ciImage: renderedImage)
     }
