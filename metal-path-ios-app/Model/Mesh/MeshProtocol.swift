@@ -15,8 +15,12 @@ protocol MeshProtocol {
     // MARK: - Properties
     
     var vertexData: [Vertex] { get set}
-    var dataSize: Int { get }
-    var buffer: MTLBuffer! { get }
+    var vertexDataSize: Int { get }
+    var vertexBuffer: MTLBuffer! { get }
+    
+    var indexData: [UInt16] { get set }
+    var indexDataSize: Int{ get }
+    var indexBuffer: MTLBuffer! { get }
     
     // MARK: - Initializers
     
