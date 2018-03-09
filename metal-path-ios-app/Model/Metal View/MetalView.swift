@@ -21,7 +21,8 @@ class MetalView: MTKView {
     
     var shaderPair: ShaderPair
     
-    var buffer: MTLBuffer?
+    var vertexBuffer: MTLBuffer?
+    var indexBuffer: MTLBuffer?
     var uniformBuffer: MTLBuffer?
     
     // MARK: - Private properties
@@ -99,15 +100,31 @@ class MetalView: MTKView {
         defaultRenderCommandEncoder = defaultCommandBuffer?.makeRenderCommandEncoder(descriptor: defaultRenderPassDescriptor)
         defaultRenderCommandEncoder?.setRenderPipelineState(renderPipelineState)
         
-        if let buffer = buffer {
-            defaultRenderCommandEncoder?.setVertexBuffer(buffer, offset: 0, index: 0)
+        // NOTE: - All buffer bindings must be set before primitive drawing (either vertex or index) - otherwise render command encoder will not be able to do its job.
+        
+        if let uniformBuffer = uniformBuffer {
             defaultRenderCommandEncoder?.setVertexBuffer(uniformBuffer, offset: 0, index: 1)
+        }
 
-            // TODO: refactor magic numbers
-            // Primitive drawing
+        // The following code performs primitive drawing without taking into account indicies of geometry primitive
+        /*
+        if let buffer = vertexBuffer {
+            defaultRenderCommandEncoder?.setVertexBuffer(buffer, offset: 0, index: 0)
+            // Vertex primitive drawing
             defaultRenderCommandEncoder?.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: 3, instanceCount: 1)
-        } else {
-            fatalError("No Vertex MTLBuffer has been found! The application will be interrupted")
+        }
+         */
+        
+        if let indexBuffer = indexBuffer, let vertexBuffer = vertexBuffer {
+            defaultRenderCommandEncoder?.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
+            
+            let indexCount = indexBuffer.length / MemoryLayout<UInt16>.size
+            // Indexed primitive drawing
+            defaultRenderCommandEncoder?.drawIndexedPrimitives(type: .triangle,
+                                                               indexCount: indexCount,
+                                                               indexType: MTLIndexType.uint16,
+                                                               indexBuffer: indexBuffer,
+                                                               indexBufferOffset: 0)
         }
         
         // Make sure that current drawable exsists
