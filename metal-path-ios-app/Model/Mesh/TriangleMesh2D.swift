@@ -12,6 +12,7 @@ import Metal
 
 /// Specifies data for triangle 2D and conformance to MeshProtocol 
 struct TriangleMesh2D: MeshProtocol {
+    
 
     // MARK: - Properties
     
@@ -26,21 +27,38 @@ struct TriangleMesh2D: MeshProtocol {
     ]
     
     /// Computes the size of the vertex array by the following scehem:
-    var dataSize: Int {
+    var vertexDataSize: Int {
         return vertexData.count * MemoryLayout<Vertex>.size
     }
     
-    var buffer: MTLBuffer!
+    var vertexBuffer: MTLBuffer!
+    
+    var indexData: [UInt16] = [
+        0, 1, 2
+    ]
+    
+    var indexBuffer: MTLBuffer!
+    
+    var indexDataSize: Int {
+        return indexData.count * MemoryLayout<UInt16>.size
+    }
     
     // MARK: - Initializers
     
     init?(device: MTLDevice) {
         
-        guard let buffer = device.makeBuffer(bytes: vertexData, length: dataSize, options: []) else {
+        guard let buffer = device.makeBuffer(bytes: vertexData, length: vertexDataSize, options: []) else {
             fatalError(#function + " could not create Metal buffer object")
             return nil
         }
-        self.buffer = buffer
+        self.vertexBuffer = buffer
+        
+        guard let indexBuffer = device.makeBuffer(bytes: indexData, length: indexDataSize, options: []) else {
+            fatalError(#function + " could not create Metal index buffer object")
+            return nil
+        }
+        
+        self.indexBuffer = indexBuffer
     }
     
 }
