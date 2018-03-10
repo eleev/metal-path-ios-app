@@ -34,6 +34,7 @@
 		A95AE2CF204EE4E7005ADAD2 /* ShaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AE2CE204EE4E7005ADAD2 /* ShaderType.swift */; };
 		A95C3CB5204E97ED0062EE88 /* Uniforms.metal in Sources */ = {isa = PBXBuildFile; fileRef = A95C3CB4204E97ED0062EE88 /* Uniforms.metal */; };
 		A95C3CB7204E99C30062EE88 /* Structs.metal in Sources */ = {isa = PBXBuildFile; fileRef = A95C3CB6204E99C30062EE88 /* Structs.metal */; };
+		A97D561E2054383100A93323 /* QuadMesh3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97D561D2054383100A93323 /* QuadMesh3D.swift */; };
 		A9ABFF8A20525DB600B5575A /* float3+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ABFF8920525DB600B5575A /* float3+utils.swift */; };
 		A9ABFF8E20525F6900B5575A /* 2DSphereTracingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ABFF8D20525F6900B5575A /* 2DSphereTracingViewController.swift */; };
 		A9ABFF902052735C00B5575A /* SquareMesh2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ABFF8F2052735C00B5575A /* SquareMesh2D.swift */; };
@@ -95,6 +96,7 @@
 		A95AE2CE204EE4E7005ADAD2 /* ShaderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderType.swift; sourceTree = "<group>"; };
 		A95C3CB4204E97ED0062EE88 /* Uniforms.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Uniforms.metal; sourceTree = "<group>"; };
 		A95C3CB6204E99C30062EE88 /* Structs.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Structs.metal; sourceTree = "<group>"; };
+		A97D561D2054383100A93323 /* QuadMesh3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadMesh3D.swift; sourceTree = "<group>"; };
 		A9ABFF8920525DB600B5575A /* float3+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "float3+utils.swift"; sourceTree = "<group>"; };
 		A9ABFF8D20525F6900B5575A /* 2DSphereTracingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2DSphereTracingViewController.swift; sourceTree = "<group>"; };
 		A9ABFF8F2052735C00B5575A /* SquareMesh2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareMesh2D.swift; sourceTree = "<group>"; };
@@ -385,9 +387,10 @@
 			isa = PBXGroup;
 			children = (
 				A9E1D50F2040631A00CBD08F /* MeshProtocol.swift */,
+				A931F06720442E51009FA7A6 /* Vertex.swift */,
 				A9E1D50D204061E300CBD08F /* TriangleMesh2D.swift */,
 				A9ABFF8F2052735C00B5575A /* SquareMesh2D.swift */,
-				A931F06720442E51009FA7A6 /* Vertex.swift */,
+				A97D561D2054383100A93323 /* QuadMesh3D.swift */,
 			);
 			path = Mesh;
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9575A122049B4E00035431F /* Matrix4f.swift in Sources */,
+				A97D561E2054383100A93323 /* QuadMesh3D.swift in Sources */,
 				A9357C60203C2F5E000EB659 /* Shaders.metal in Sources */,
 				A9448CD4203D9CE000DEB924 /* ScenesTableViewController.swift in Sources */,
 				A95AE2C8204EDC24005ADAD2 /* NodeType.swift in Sources */,
