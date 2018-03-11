@@ -8,6 +8,7 @@
 
 import Foundation
 import simd
+import MetalKit
 
 struct Matrix4f: MatrixProtocol {
     
@@ -140,4 +141,42 @@ struct Matrix4f: MatrixProtocol {
     }
     
     
+}
+
+// MARK: - Extension that adds support for matrix project capabilites
+extension Matrix4f {
+    
+    
+    // MARK: - Camera and projection methods
+    
+    /// Computes mode view projection matrix based on a number of inpout parameters
+    ///
+    /// - Parameters:
+    ///   - drawable: is a Core Animation drawable instance that has direct relation to Metal API and is used in rendering
+    ///   - vmatrix: is a view matrix represented by matrix_float4x4 simd type
+    ///   - mmatrix: is a model matrix represented by matrix_float4x4 simd type
+    ///   - nearPlane: is a Float value that represents the nearest plane to the virtual camera - the less the value the closer the camera can be positioned to object
+    ///   - farPlane: is a Float value that represents the farest plane from the virual camera - high values are used to render as many objects as possible (however it may cost a lot of GPU resources - be careful or use high value in combination with tesselation, some sort of geometry caching or any other optimization technique)
+    ///   - fovy: is a Float value that represents field of view of the virtual camera - this value can be used to simulate fish eye effect for instance. Normal fovy for human is around 90-110 degrees - however in order to find an optimal value you need to conduct experiments
+    /// - Returns: a new, model view projection matrix that can be used to render objects with perspective
+    static func computeModelViewProjection(for drawable: CAMetalDrawable, view vmatrix: matrix_float4x4, model mmatrix: matrix_float4x4, nearPlane: Float, farPlane: Float, fovy: Float = 1.1) -> matrix_float4x4 {
+        
+        let drawableTexture = drawable.texture
+        let aspect = Float(drawableTexture.width / drawableTexture.height)
+        let projectionMatrix = project(near: nearPlane, far: farPlane, aspect: aspect, fovy: fovy)
+        let modelView = computeModelView(mmatrix, vmatrix)
+        let modelViewProjection = matrix_multiply(projectionMatrix, modelView)
+        
+        return modelViewProjection
+    }
+    
+    /// Computes model view matrix that transforms model to the view space and is used as part of model view projection transformations
+    ///
+    /// - Parameters:
+    ///   - model: is a model matrix represented by matrix_float4x4 type
+    ///   - view: is a view matrix represented by matrix_float4x4 type
+    /// - Returns: a new, model view matrix of type matrix_float4x4
+    static func computeModelView(_ model: matrix_float4x4, _ view: matrix_float4x4) -> matrix_float4x4 {
+        return matrix_multiply(model, view)
+    }
 }
