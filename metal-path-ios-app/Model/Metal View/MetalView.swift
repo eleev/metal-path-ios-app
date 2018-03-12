@@ -16,6 +16,7 @@ class MetalView: MTKView {
     // MARK: - Typealiases
     
     typealias RenderShaderPair = (vertexFunction: MTLFunction, fragmentFunction: MTLFunction)
+    typealias Update = (_ vertex: MTLBuffer?, _ index: MTLBuffer?, _ uniform: MTLBuffer?)->Void
     
     // MARK: - Properties
     
@@ -24,6 +25,10 @@ class MetalView: MTKView {
     var vertexBuffer: MTLBuffer?
     var indexBuffer: MTLBuffer?
     var uniformBuffer: MTLBuffer?
+    
+    
+    /// The closure is used as an injection point when updating scene in the update loop. User should set a custom function here to be able to update custom logic
+    var updateClosure: Update?
     
     // MARK: - Private properties
     
@@ -69,6 +74,8 @@ class MetalView: MTKView {
         
         defaultRenderPassDescriptor = prepareRenderPassDescriptor()
         
+        updateClosure?(vertexBuffer, indexBuffer, uniformBuffer)
+        
         do {
             try render()
         } catch {
@@ -99,6 +106,10 @@ class MetalView: MTKView {
         
         defaultRenderCommandEncoder = defaultCommandBuffer?.makeRenderCommandEncoder(descriptor: defaultRenderPassDescriptor)
         defaultRenderCommandEncoder?.setRenderPipelineState(renderPipelineState)
+        
+        // Perspective rendering
+        defaultRenderCommandEncoder?.setFrontFacing(.counterClockwise)
+        defaultRenderCommandEncoder?.setCullMode(.back)
         
         // NOTE: - All buffer bindings must be set before primitive drawing (either vertex or index) - otherwise render command encoder will not be able to do its job.
         
