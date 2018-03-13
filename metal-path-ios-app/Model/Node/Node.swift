@@ -58,7 +58,7 @@ class Node: NodeType {
     
     /// Prepares metal buffer data to be sent to the GPU
     func prepareModelBuffer() {
-        let memoryLayout = MemoryLayout<Uniforms>.size * 2
+        let memoryLayout = MemoryLayout<Uniforms>.size * 2 // TODO: this line needs to be refactored and "magic" numbers need to be removed. In order to do that, the Uniform bridging hearing should be refactored and migrated from Renderer class to MetalView class
         modelMatrixBuffer = device.makeBuffer(length: memoryLayout, options: [])
         let bufferPointer = modelMatrixBuffer?.contents()
         memcpy(bufferPointer, modelMatrix.data, memoryLayout)
