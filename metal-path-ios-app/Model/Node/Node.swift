@@ -58,7 +58,7 @@ class Node: NodeType {
     
     /// Prepares metal buffer data to be sent to the GPU
     func prepareModelBuffer() {
-        let memoryLayout = MemoryLayout<Float>.size * 16
+        let memoryLayout = MemoryLayout<Uniforms>.size * 2
         modelMatrixBuffer = device.makeBuffer(length: memoryLayout, options: [])
         let bufferPointer = modelMatrixBuffer?.contents()
         memcpy(bufferPointer, modelMatrix.data, memoryLayout)
