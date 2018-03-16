@@ -101,6 +101,7 @@
 		A97D561D2054383100A93323 /* QuadMesh3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadMesh3D.swift; sourceTree = "<group>"; };
 		A99EB2B22056CC73008A9788 /* AnimatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatorProtocol.swift; sourceTree = "<group>"; };
 		A99EB2B42056CD10008A9788 /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		A9A0E30F205C35F200FA3FBD /* ShaderStructs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderStructs.h; sourceTree = "<group>"; };
 		A9ABFF8920525DB600B5575A /* float3+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "float3+utils.swift"; sourceTree = "<group>"; };
 		A9ABFF8D20525F6900B5575A /* 2DSphereTracingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2DSphereTracingViewController.swift; sourceTree = "<group>"; };
 		A9ABFF8F2052735C00B5575A /* SquareMesh2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareMesh2D.swift; sourceTree = "<group>"; };
@@ -175,6 +176,7 @@
 				A931F06520440E3B009FA7A6 /* PassThrough.metal */,
 				A95C3CB4204E97ED0062EE88 /* Uniforms.metal */,
 				A95C3CB6204E99C30062EE88 /* Structs.metal */,
+				A9A0E30F205C35F200FA3FBD /* ShaderStructs.h */,
 			);
 			path = "Pass-Through";
 			sourceTree = "<group>";
