@@ -55,7 +55,9 @@ class Animator: AnimatorProtocol {
         let bufferPointer = uniformBuffer.contents()
 //        var uniforms = Uniforms(projectionMatrix: modelViewProjectionMatrix)
         
-        var uniforms = Uniforms(projectionMatrix: projMatrix, modelViewMatrix: modelViewMatrix)
+//        var uniforms = Uniforms(projectionMatrix: projMatrix, modelViewMatrix: modelViewMatrix)
+        
+        var uniforms = Uniforms(projectionMatrix: projMatrix, modelViewMatrix: modelViewMatrix, modelMatrix: modelMatrix)
         
         memcpy(bufferPointer, &uniforms, MemoryLayout<Uniforms>.size)
     }
