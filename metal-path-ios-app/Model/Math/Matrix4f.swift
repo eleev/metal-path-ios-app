@@ -107,9 +107,9 @@ struct Matrix4f: MatrixProtocol {
     
     static func scaling(from scale: vector_float3) -> matrix_float4x4{
         
-        let x = vector_float4(arrayLiteral: scale.x, 0, 0)
-        let y = vector_float4(arrayLiteral: 0, scale.y, 0)
-        let z = vector_float4(arrayLiteral: 0, 0, scale.z)
+        let x = vector_float4(arrayLiteral: scale.x, 0, 0, 0)
+        let y = vector_float4(arrayLiteral: 0, scale.y, 0, 0)
+        let z = vector_float4(arrayLiteral: 0, 0, scale.z, 0)
         let w = vector_float4(0, 0, 0, 1)
         
         return matrix_float4x4(columns: (x, y, z, w))
