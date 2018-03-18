@@ -140,6 +140,16 @@ struct Matrix4f: MatrixProtocol {
         return matrix_float4x4(columns:(x, y, z, w))
     }
     
+    func convert() -> matrix_float4x4 {
+        let columnX = float4(x: data[0], y: data[1], z: data[2], w: data[3])
+        let columnY = float4(x: data[4], y: data[5], z: data[6], w: data[7])
+        let columnZ = float4(x: data[8], y: data[9], z: data[10], w: data[11])
+        let columnW = float4(x: data[12], y: data[13], z: data[14], w: data[15])
+        
+        let columns = [columnX, columnY, columnZ, columnW]
+        return matrix_float4x4(columns)
+    }
+    
     
 }
 
