@@ -56,22 +56,6 @@
             </objects>
             <point key="canvasLocation" x="1342" y="-570"/>
         </scene>
-        <!--Textured, Rotating Cube-->
-        <scene sceneID="tXr-a1-R10">
-            <objects>
-                <viewController id="BV1-FR-VrT" customClass="TexturedRotatingCubeViewController" customModule="metal_path_ios_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3se-qz-xqx" customClass="MTKView">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="rZh-zQ-HcR"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Textured, Rotating Cube" id="6RC-J6-Giu"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="468" y="906"/>
-        </scene>
         <!--Metal Sandbox-->
         <scene sceneID="Fih-TB-RGZ">
             <objects>
@@ -118,44 +102,12 @@
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Intermediate" id="53D-GF-IOW">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="MII-u7-XHa" detailTextLabel="S8v-zo-TWM" imageView="cYN-0Z-jdB" rowHeight="100" style="IBUITableViewCellStyleSubtitle" id="O0w-9A-MMi">
-                                        <rect key="frame" x="0.0" y="156" width="834" height="100"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O0w-9A-MMi" id="e4O-01-lt3">
-                                            <rect key="frame" x="0.0" y="0.0" width="796" height="99.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Textured, Rotating Cube" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MII-u7-XHa">
-                                                    <rect key="frame" x="99" y="30" width="185" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Scene demostrates how to render Qube with qube texture mapping technique" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S8v-zo-TWM">
-                                                    <rect key="frame" x="99" y="53.5" width="439.5" height="14.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Idea Scene " id="cYN-0Z-jdB">
-                                                    <rect key="frame" x="20" y="17" width="64" height="64"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="BV1-FR-VrT" kind="show" id="VFu-0U-Jni"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
+                                <cells/>
                             </tableViewSection>
                             <tableViewSection headerTitle="Ray Tracing" id="bp5-Ap-EUE">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="pd4-YO-DES" detailTextLabel="Jqd-Dk-8W9" imageView="JnM-zQ-wie" rowHeight="100" style="IBUITableViewCellStyleSubtitle" id="3BI-K0-7HY">
-                                        <rect key="frame" x="0.0" y="284" width="834" height="100"/>
+                                        <rect key="frame" x="0.0" y="184" width="834" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3BI-K0-7HY" id="cjA-l0-djE">
                                             <rect key="frame" x="0.0" y="0.0" width="796" height="99.5"/>
@@ -186,7 +138,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="aJT-CP-a4h" detailTextLabel="OD8-Dl-Lvd" imageView="9IQ-2V-5bw" rowHeight="100" style="IBUITableViewCellStyleSubtitle" id="iXq-6T-LH8">
-                                        <rect key="frame" x="0.0" y="384" width="834" height="100"/>
+                                        <rect key="frame" x="0.0" y="284" width="834" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iXq-6T-LH8" id="Olj-uB-4Sv">
                                             <rect key="frame" x="0.0" y="0.0" width="796" height="99.5"/>
