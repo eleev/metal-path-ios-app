@@ -10,22 +10,29 @@
 #include <simd/simd.h>
 #import "Structs.metal"
 
-// Including header shared between this Metal shader code and Swift/C code executing Metal API commands
-//#import "metal-path-ios-app/ShaderTypes.h"
-
-
 using namespace metal;
 
 vertex Vertex vertexUniformFunc(constant Vertex *vertices [[buffer(0)]], constant Uniforms &uniforms [[buffer(1)]], uint vid [[vertex_id]]) {
     
-    float4x4 matrix = uniforms.modelMatrix;
+    // Routines
+    
+//    float4x4 modelMatrix = uniforms.modelMatrix;
+//    float4x4 viewMatrix = uniforms.viewMatrix;
+//    float4x4 projectionMatrix = uniforms.projectionMatrix;
+//    float4x4 modelViewMatrix = viewMatrix * modelMatrix;
+//    float4x4 modelViewProjectionMatrix = projectionMatrix * modelViewMatrix;
+    
+    // Preparation of variables
     
     Vertex in = vertices[vid];
     Vertex out;
-    out.position = matrix * float4(in.position);
     
-//    out.position = uniforms.projectionMatrix * uniforms.modelViewMatrix * out.position;
+    // Vertex projection
+    
+//    out.position = modelViewProjectionMatrix * float4(in.position);
+    out.position = uniforms.modelViewProjectionMatrix * float4(in.position);
     out.color = in.color;
+    
     
     return out;
 }
