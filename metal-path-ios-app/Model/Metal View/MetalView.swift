@@ -74,13 +74,13 @@ class MetalView: MTKView {
         
         defaultRenderPassDescriptor = prepareRenderPassDescriptor()
         
-        updateClosure?(vertexBuffer, indexBuffer, uniformBuffer)
-        
         do {
             try render()
         } catch {
             debugPrint(#function + " thrown the following error: ", error)
         }
+        
+        updateClosure?(vertexBuffer, indexBuffer, uniformBuffer)
     }
     
     // MARK: - Private Methods
