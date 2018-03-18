@@ -7,6 +7,7 @@
 //
 
 #include <metal_stdlib>
+#include <simd/simd.h>
 using namespace metal;
 
 struct Vertex {
@@ -15,8 +16,11 @@ struct Vertex {
 };
 
 struct Uniforms {
-    float4x4 modelMatrix;
-    float4x4 modelViewProjectionMatrix;
+//    matrix_float4x4 modelMatrix;
+//    matrix_float4x4 viewMatrix;
+//    matrix_float4x4 projectionMatrix;
+    matrix_float4x4 modelViewProjectionMatrix;
+
 };
 
 
