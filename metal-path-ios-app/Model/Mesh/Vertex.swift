@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import simd
 
 /// The structure describes a single vertex using the following properties:
 /// - position  - 4 component float (x, y, z, w)
