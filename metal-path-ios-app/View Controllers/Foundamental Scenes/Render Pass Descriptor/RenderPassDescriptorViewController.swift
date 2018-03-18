@@ -29,22 +29,20 @@ class RenderPassDescriptorViewController: UIViewController {
         }
         
         /// Node preperation
-        let triangle = TriangleMesh2D(device: defaultDevice)
-//        let quad = QuadMesh3D(device: defaultDevice)
+//        let triangle = TriangleMesh2D(device: defaultDevice)
+        let quad = QuadMesh3D(device: defaultDevice)
         
-        let node = Node(device: defaultDevice, geometry: triangle!)
+        let node = Node(device: defaultDevice, geometry: quad!)
         let defaultMatrix = node.modelMatrix
         node.modelMatrix = Matrix4f.scale(matrix: defaultMatrix, factor: float3(x: 0.5, y: 0.5, z: 0.5))
-//        node.modelMatrix = Matrix4f.rotate(matrix: node.modelMatrix, rotation: float3(x: 1, y: 0, z: 1))
-        
         // TODO: manual buffer memory copy should be optimized
         node.prepareModelBuffer()
-        
-//        let animator = Animator(speed: 1, easing: .easeIn)
-//        if let modelBuffer = node.modelMatrixBuffer {
-//            animator.rotate(uniformBuffer: modelBuffer)
-//        }
-        
+
+        let animator = Animator(speed: 1, easing: .easeIn)
+        if let modelBuffer = node.modelMatrixBuffer {
+            animator.update(uniformBuffer: modelBuffer)
+            node.prepareModelBuffer()
+        }
         
         /// Shader preperation
         let vertexShader = Shader(type: .vertex, name: "vertexUniformFunc")
@@ -56,7 +54,7 @@ class RenderPassDescriptorViewController: UIViewController {
         renderer.vertexBuffer = node.geometry?.vertexBuffer
         renderer.indexBuffer = node.geometry?.indexBuffer
         renderer.uniformBuffer = node.modelMatrixBuffer
-        
+
         
         view = renderer
     }
