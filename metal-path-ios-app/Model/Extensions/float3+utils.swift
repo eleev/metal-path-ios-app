@@ -9,10 +9,10 @@
 import Foundation
 import simd
 
-extension float3 {
+extension SIMD3 where SIMD3.Scalar == Float {
     
-    func unit() -> float3 {
+    func unit() -> SIMD3<Float> {
         let length = sqrt(dot(self, self))
-        return float3(x: self.x / length, y: self.y / length, z: self.z / length)
+        return SIMD3<Float>(x: self.x / length, y: self.y / length, z: self.z / length)
     }
 }

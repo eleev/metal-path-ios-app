@@ -31,7 +31,7 @@ struct Matrix4f: MatrixProtocol {
     
     // MARK: - Methods
     
-    static func translate(matrix: Matrix4f, _ position: float3) -> Matrix4f {
+    static func translate(matrix: Matrix4f, _ position: SIMD3<Float>) -> Matrix4f {
         var matrix = matrix
         
         matrix.data[12] = position.x
@@ -41,7 +41,7 @@ struct Matrix4f: MatrixProtocol {
         return matrix
     }
     
-    static func scale(matrix: Matrix4f, factor: float3) -> Matrix4f {
+    static func scale(matrix: Matrix4f, factor: SIMD3<Float>) -> Matrix4f {
         var matrix = matrix
         
         matrix.data[0] = factor.x
@@ -51,7 +51,7 @@ struct Matrix4f: MatrixProtocol {
         return matrix
     }
     
-    static func rotate(matrix: Matrix4f, rotation: float3) -> Matrix4f {
+    static func rotate(matrix: Matrix4f, rotation: SIMD3<Float>) -> Matrix4f {
         var matrix = matrix
         
         matrix.data[0] = cos(rotation.y) * cos(rotation.z)
@@ -141,10 +141,10 @@ struct Matrix4f: MatrixProtocol {
     }
     
     func convert() -> matrix_float4x4 {
-        let columnX = float4(x: data[0], y: data[1], z: data[2], w: data[3])
-        let columnY = float4(x: data[4], y: data[5], z: data[6], w: data[7])
-        let columnZ = float4(x: data[8], y: data[9], z: data[10], w: data[11])
-        let columnW = float4(x: data[12], y: data[13], z: data[14], w: data[15])
+        let columnX = SIMD4<Float>(x: data[0], y: data[1], z: data[2], w: data[3])
+        let columnY = SIMD4<Float>(x: data[4], y: data[5], z: data[6], w: data[7])
+        let columnZ = SIMD4<Float>(x: data[8], y: data[9], z: data[10], w: data[11])
+        let columnW = SIMD4<Float>(x: data[12], y: data[13], z: data[14], w: data[15])
         
         let columns = [columnX, columnY, columnZ, columnW]
         return matrix_float4x4(columns)

@@ -13,8 +13,8 @@ struct Ray {
     
     // MARK: - Properties
     
-    var origin: float3
-    var direction: float3
+    var origin: SIMD3<Float>
+    var direction: SIMD3<Float>
     
     // MARK: - Methods
     
@@ -22,7 +22,7 @@ struct Ray {
     ///
     /// - Parameter t: is a Float paramenter
     /// - Returns: is a float3 vector describing new direction
-    func compute(_ t: Float) -> float3 {
+    func compute(_ t: Float) -> SIMD3<Float> {
         return origin + t * direction
     }
 }

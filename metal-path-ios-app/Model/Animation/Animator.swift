@@ -39,8 +39,8 @@ class Animator: AnimatorProtocol {
         let scaled = Matrix4f.scaling(from: vector3(simd_float2(0.5, 0.5), 0.5))
         rotation += 1 / 100 * Float.pi / 4
         
-        let rotatedY = Matrix4f.rotation(from: rotation, axis: float3(0, 1, 0))
-        let rotatedX = Matrix4f.rotation(from: Float.pi / 4, axis: float3(1, 0, 0))
+        let rotatedY = Matrix4f.rotation(from: rotation, axis: SIMD3<Float>(0, 1, 0))
+        let rotatedX = Matrix4f.rotation(from: Float.pi / 4, axis: SIMD3<Float>(1, 0, 0))
         let modelMatrix = matrix_multiply(matrix_multiply(rotatedX, rotatedY), scaled)
 
         

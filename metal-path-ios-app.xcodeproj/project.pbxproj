@@ -43,6 +43,7 @@
 		A9C2FE0820511BA0009C83D0 /* RayTracer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C2FE0720511BA0009C83D0 /* RayTracer.swift */; };
 		A9E1D50E204061E300CBD08F /* TriangleMesh2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1D50D204061E300CBD08F /* TriangleMesh2D.swift */; };
 		A9E1D5102040631A00CBD08F /* MeshProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1D50F2040631A00CBD08F /* MeshProtocol.swift */; };
+		A9F903E0262C9F5A002FDADD /* DenoisingShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = A9F903DF262C9F5A002FDADD /* DenoisingShaders.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,8 @@
 		A9C2FE0720511BA0009C83D0 /* RayTracer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RayTracer.swift; sourceTree = "<group>"; };
 		A9E1D50D204061E300CBD08F /* TriangleMesh2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleMesh2D.swift; sourceTree = "<group>"; };
 		A9E1D50F2040631A00CBD08F /* MeshProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshProtocol.swift; sourceTree = "<group>"; };
+		A9F903DF262C9F5A002FDADD /* DenoisingShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = DenoisingShaders.metal; sourceTree = "<group>"; };
+		A9F903E7262C9F8D002FDADD /* DenoisingShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DenoisingShaderTypes.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +165,7 @@
 		A931F06320440DFF009FA7A6 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
+				A9F903DE262C9F3C002FDADD /* Denoising */,
 				A931F06420440E08009FA7A6 /* Pass-Through */,
 			);
 			path = Shaders;
@@ -406,6 +410,15 @@
 			path = Mesh;
 			sourceTree = "<group>";
 		};
+		A9F903DE262C9F3C002FDADD /* Denoising */ = {
+			isa = PBXGroup;
+			children = (
+				A9F903DF262C9F5A002FDADD /* DenoisingShaders.metal */,
+				A9F903E7262C9F8D002FDADD /* DenoisingShaderTypes.h */,
+			);
+			path = Denoising;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -469,20 +482,23 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Astemir Eleev";
 				TargetAttributes = {
 					A9357C54203C2F5E000EB659 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1240;
 						ProvisioningStyle = Automatic;
 					};
 					A9357C6D203C2F5E000EB659 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1240;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A9357C54203C2F5E000EB659;
 					};
 					A9357C78203C2F5E000EB659 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1240;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A9357C54203C2F5E000EB659;
 					};
@@ -549,6 +565,7 @@
 				A9448CD4203D9CE000DEB924 /* ScenesTableViewController.swift in Sources */,
 				A95AE2C8204EDC24005ADAD2 /* NodeType.swift in Sources */,
 				A90470E22051204A004CDCEC /* Ray.swift in Sources */,
+				A9F903E0262C9F5A002FDADD /* DenoisingShaders.metal in Sources */,
 				A9448CDE203DCC7900DEB924 /* RenderPassDescriptorViewController.swift in Sources */,
 				A9ABFF8A20525DB600B5575A /* float3+utils.swift in Sources */,
 				A9E1D5102040631A00CBD08F /* MeshProtocol.swift in Sources */,
@@ -639,6 +656,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -646,8 +664,10 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -673,7 +693,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -696,6 +716,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -703,8 +724,10 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -724,7 +747,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -745,7 +768,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -763,7 +786,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -779,7 +802,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.metal-path-ios-appTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/metal-path-ios-app.app/metal-path-ios-app";
 			};
@@ -796,7 +819,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.metal-path-ios-appTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/metal-path-ios-app.app/metal-path-ios-app";
 			};
@@ -812,7 +835,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.metal-path-ios-appUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "metal-path-ios-app";
 			};
@@ -828,7 +851,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.metal-path-ios-appUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "metal-path-ios-app";
 			};

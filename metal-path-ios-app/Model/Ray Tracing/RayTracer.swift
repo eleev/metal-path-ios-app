@@ -60,10 +60,10 @@ struct RayTracer {
         var pixel = Pixel(r: 0, g: 0, b: 0, a: 255)
         var pixels = [Pixel](repeating: pixel, count: width * height)
         
-        let lowerLeftCorner = float3(x: -2.0, y: 1.0, z: -1.0)
-        let horizontal = float3(x: 4.0, y: 0, z: 0)
-        let vertical = float3(x: 0, y: -2.0, z: 0)
-        let origin = float3()
+        let lowerLeftCorner = SIMD3<Float>(x: -2.0, y: 1.0, z: -1.0)
+        let horizontal = SIMD3<Float>(x: 4.0, y: 0, z: 0)
+        let vertical = SIMD3<Float>(x: 0, y: -2.0, z: 0)
+        let origin = SIMD3<Float>()
         
         for i in 0..<width {
             for j in 0..<height {
@@ -81,7 +81,7 @@ struct RayTracer {
     
     // MARK: - Private utlity methods
     
-    private func hitSphere(center: float3, radius: Double, ray: Ray) -> Double  {
+    private func hitSphere(center: SIMD3<Float>, radius: Double, ray: Ray) -> Double  {
         let origin = ray.origin - center
         let direction = ray.direction
         let a = dot(direction, direction)
@@ -97,21 +97,21 @@ struct RayTracer {
     }
     
     
-    private func color(ray: Ray) -> float3 {
-        let minusZ = float3(x: 0, y: 0, z: -1.0)
+    private func color(ray: Ray) -> SIMD3<Float> {
+        let minusZ = SIMD3<Float>(x: 0, y: 0, z: -1.0)
         var t = hitSphere(center: minusZ, radius: 0.5, ray: ray)
         
         if t > 0.0 {
             let computedRay = ray.compute(Float(t))
             let negated = computedRay - minusZ
             let norm = negated.unit()
-            return 0.5 * float3(x: norm.x + 1.0, y: norm.y + 1.0, z: norm.z + 1.0)
+            return 0.5 * SIMD3<Float>(x: norm.x + 1.0, y: norm.y + 1.0, z: norm.z + 1.0)
         }
         
         let unitDireciton = ray.direction.unit()
         t = Double(0.5 * (unitDireciton.y + 1.0))
         
-        return Float(1.0 - t) * float3(1.0, 1.0, 1.0) + Float(t) * float3(0.5, 0.7, 1.0)
+        return Float(1.0 - t) * SIMD3<Float>(1.0, 1.0, 1.0) + Float(t) * SIMD3<Float>(0.5, 0.7, 1.0)
     }
     
     

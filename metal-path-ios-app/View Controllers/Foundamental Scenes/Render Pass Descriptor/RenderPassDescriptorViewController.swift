@@ -34,7 +34,7 @@ class RenderPassDescriptorViewController: UIViewController {
         
         let node = Node(device: defaultDevice, geometry: quad!)
         let defaultMatrix = node.modelMatrix
-        node.modelMatrix = Matrix4f.scale(matrix: defaultMatrix, factor: float3(x: 0.5, y: 0.5, z: 0.5))
+        node.modelMatrix = Matrix4f.scale(matrix: defaultMatrix, factor: SIMD3<Float>(x: 0.5, y: 0.5, z: 0.5))
         // TODO: manual buffer memory copy should be optimized
         node.prepareModelBuffer()
 
